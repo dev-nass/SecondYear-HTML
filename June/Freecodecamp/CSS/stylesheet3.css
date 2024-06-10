@@ -1,0 +1,92 @@
+/* CSS REGISTRATION FORM */
+
+body {
+    background-color: #1b1b32;
+    color: #F5F6F7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+}
+
+h1, p {
+    margin: 1em auto;
+    text-align: center;
+}
+
+form {
+    /*!! border: solid 1px yellow; */
+    margin: 0 auto;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 0 0 2em 0; /*only application for some broswer -- makes THE SUBMIT BTN not so close at the bottom of the screen */
+    width: 80vw;
+}
+
+label {
+    /*!! border: solid 1px red; */
+    display: block; /* make each <label> separated on each line */
+    margin: 0.5rem 0; /* give each <label> spaces on their top and bottom */
+}
+
+input, 
+select, 
+textarea {
+    margin: 10px 0 0 0;
+    min-height: 2em;
+    width: 100%;
+}
+
+input[type="file"] {
+    padding: 1px 2px;
+}
+
+/* TARGETS THE TWO DOTS ON THE SECOND FIELDSET  */
+.input-accountType-inline { 
+    margin: 0 0.5em 0 0; 
+    vertical-align: middle; /* properly align the two DOTS vertically */
+    width: unset; /* removes the WIDTH: 100% above */
+}
+
+input, 
+textarea {
+    background-color: #0a0a23;
+    border: solid 1px #0a0a23;
+    color: #ffffff;
+}
+
+fieldset {
+    border: none; /* removes the default border */
+    border-bottom: solid 3px #3b3b4f; /* use to add a slight separation each fieldset */
+    padding: 2rem 0;
+}
+
+/* CSS Pseudo code that target the LAST KIND of that element */
+fieldset:last-of-type {
+    /* border: solid 1px red; */
+    border: none;
+}
+
+/* LAST LABEL -- for centering */
+label[for="terms-and-conditions"] {
+    text-align: center;
+}
+
+.input-TAC-inline {
+    margin: 0 0.5rem 0 0; /* align the LABEL text and INPUT (CHECKBOX) beside each other*/
+    vertical-align: middle; 
+    width: unset;
+}
+
+/* SELECTS IT BY ITS TYPE */
+input[type="submit"] {
+    background-color: #3b3b4f;
+    border-color: white;
+    display: block;
+    font-size: 1.1rem;
+    height: 2em;
+    margin: 1em auto;
+    min-width: 300px; /* consistent BTN SIZE even in low resolution screen */
+    width: 60%;
+}
