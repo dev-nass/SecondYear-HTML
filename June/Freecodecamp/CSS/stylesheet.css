@@ -1,0 +1,125 @@
+/* COFFEE MENU WEBPAGE */
+
+body{
+    background-color: burlywood;
+    background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.div-menu{
+    background-color: burlywood;
+    /* border: solid 3px red; */
+    margin-left: auto; /* automatically give left margin */
+    margin-right: auto; /* automatically give right margin, hence centering it */
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    width: 80%;
+    max-width: 500px; /* if the div-menu reaches 500px width it stop to grow */
+}
+
+/* both of which are use as DEFAULT FONT sizes */
+h1 { font-size: 40px; } 
+h2 { font-size: 30px; }
+
+h1, h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* backup fonts are called FALLBACK fonts */
+}
+
+/* for the <p> at the FOOTER */
+p {
+    text-align: center;
+}
+
+.h1-main-header{
+    margin-top: 0; /* to remove the space above it */
+    margin-bottom: 15px; /* to remove the space between CAMPER CAFE and Est. 2020. */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.p-location{
+    font-style: italic;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+/* default values of an <hr> element make it appear light grey line */
+/* the default value of a property named border-width is 1px for all edges of hr elements. */
+/* see course 2 step 70 for this (https://www.freecodecamp.org/learn/2022/responsive-web-design/learn-basic-css-by-building-a-cafe-menu/step-70) */
+hr {
+    background-color: brown;
+    border-width: 0px;
+    /* border-color: brown; */
+    height: 3px;
+}
+
+.h2-coffee-header, .h2-dessert-header{
+    text-align: center;
+}
+
+.img-coffee-icon, .img-pie-icon {
+    /* border: solid 1px red; */
+    display: block;
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* article elent that nest the two <p> for PRODUCT NAME and PRICE */
+.item {
+    /* border: solid 2px blue; */
+    /* padding: 0; the default value of article is 0, see the explanation below */
+}
+
+/* target both of the COFFEE NAME <p> and its PRICE <p> */
+.item p{
+    display: inline-block; /* ensure that both COFFEE NAME and PRICE <p> stay on the same line */
+    font-size: 18px;
+    margin-top: 5px; /* overwrites the default margin-top value, the spaces is caused by the margin of <p> not the padding of <article> */
+    margin-bottom: 5px; /* overwrites the default margin-bottom value, the spaces is caused by the margin of <p> not the padding of <article> */
+}
+
+/* FLAVOR variable if use for <p> that contains COFFEE flavor, and DESSERT for <p> that contains desert */
+.flavor, .dessert{
+    text-align: left; /* moves the text to left */
+    width: 75%; /* and give them a 75% space from there */
+}
+
+.price{
+    text-align: right; /* moves the text to right */
+    width: 25%; /* and give them a 25% space from there */
+}
+
+.hr-bottom-line {
+    margin-top: 25px;
+}
+
+
+/* FOOTER PART */
+
+
+footer {
+    font-size: 14px;
+}
+
+a {
+    color: black;
+}
+
+/* Pseudo Code in CSS for visited <a> linked links */
+a:visited {
+    color: black;
+}
+
+/* Pseudo Code in CSS for hovering the mouse */
+a:hover {
+    color: brown;
+}
+
+/* Pseudo Code in CSS for current click on the link */
+a:active {
+    color: brown;
+}
