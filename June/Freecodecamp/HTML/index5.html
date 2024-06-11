@@ -1,3 +1,5 @@
+<!-- HTML SURVEY FORM: CERTIFICATION -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -12,7 +14,7 @@
         <!-- FORM ELEMENT -->
         <form id="survey-form">
             <!-- FIRST FIELDSET: NAME, EMAIL, NUMBER -->
-            <fieldset>
+            <fieldset class="first-fieldset">
                 <label for="name" id="name-label">Enter your name: <input id="name" placeholder="First Name, Middle Name, Last Name" required type="text"/></label>
                 <label for="email" id="email-label">Enter your email:<input id="email" placeholder="freecodecamp@gmail.com" required type="email"/></label>
                 <label for="number" id="number-label">Enter your number:<input id="number" max="9" min="0" placeholder="0123456789" required type="number"/></label>
@@ -37,11 +39,11 @@
             <!-- FOURTH FIELDSET: COURSES THEY WANT TO APPLY (CHECKBOX) -->
             <fieldset>
                 <legend>Courses you want to apply (required)</legend>
-                <label for="course-nstp">NSTP<input id="course-nstp" type="checkbox" value="NSTP"/></label>
-                <label for="course-filipino">Filipino<input id="course-filipino" type="checkbox" value="Filipino"/></label>
-                <label for="course-purposivecomm">Purposive Communication<input id="course-purposivecomm" type="checkbox" value="Purposive"/></label>
-                <label for="course-mathanalysis">Math Analysis<input id="course-mathanalysis" type="checkbox" value="Math"/></label>
-                <label for="course-artapp">Art Appreciation<input id="course-artapp" type="checkbox" value="Art"/></label>
+                <label for="course-nstp"><input id="course-nstp" class="course" type="checkbox" value="NSTP"/>NSTP</label>
+                <label for="course-filipino"><input id="course-filipino" class="course" type="checkbox" value="Filipino"/>Filipino</label>
+                <label for="course-purposivecomm"><input id="course-purposivecomm" class="course" type="checkbox" value="Purposive"/>Purposive Communication</label>
+                <label for="course-mathanalysis"><input id="course-mathanalysis" class="course" type="checkbox" value="Math"/>Math Analysis</label>
+                <label for="course-artapp"><input id="course-artapp" class="course" type="checkbox" value="Art"/>Art Appreciation</label>
             </fieldset>
             <!-- FIFTH FIELDSET: REFERRER OF THE SCHOOL -->
             <fieldset>
