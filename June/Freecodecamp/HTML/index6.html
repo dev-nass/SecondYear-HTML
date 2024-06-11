@@ -1,0 +1,104 @@
+<!-- HTML KLD FORM -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>KLD REGISTRATION</title>
+        <link href="css/stylesheet5.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Kelehiyo ng Lungsod ng Dasmarinas</h1>
+            <p>Building the foundation for the Dasmarinenos</p>
+        </header>
+        <form class="form-main">
+            <fieldset>
+                <!-- HOLDS ALL THE NAME TFIELDS -->
+                <div class="div-form-nameFieldsContainer">
+                        <!-- first name tfield -->
+                    <div class="div-label-input-container">
+                        <label for="input-name">First Name:</label>
+                        <input id="input-name" type="text"/>
+                    </div>
+
+                        <!-- middle name tfield -->
+                    <div class="div-label-input-container">
+                        <label for="input-name">Middle Name:</label>
+                        <input id="input-name" type="text"/>
+                    </div>
+
+                        <!-- last name tfield -->
+                    <div class="div-label-input-container">
+                        <label for="input-name">Last Name:</label>
+                        <input id="input-name" type="text"/>
+                    </div>
+                </div>
+                
+                <!-- HOLDS AGE, RELIGION AND CONTACT NUMBER TFIELDS -->
+                <div class="div-form-age-religion-coNumberContainer">
+                    <!-- for age -->
+                    <div class="div-age-religion-conumber-container div-age-container">
+                        <label>Age:</label>
+                        <input id="input-age" type="number"/>
+                    </div>
+
+                    <!-- for religion -->
+                    <div class="div-age-religion-conumber-container div-religion-container">
+                        <label>Religion:</label>
+                        <input id="input-religion" type="text"/>
+                    </div>
+
+                    <!-- for contact number -->
+                    <div class="div-age-religion-conumber-container div-conumber-container">
+                        <label>Contact Number:</label>
+                        <input id="input-coNumber" type="number"/>
+                    </div>
+                </div>
+                
+                <!-- HOLDS THE ADDRESS -->
+                <div class="div-form-address-bdateContainer">
+                    <!-- address -->
+                    <div class="div-label-input-address-bdateContainer div-address-conttainer">
+                        <label>Address:</label>
+                        <input/>
+                    </div>
+
+                    <!-- birth date -->
+                    <div class="div-label-input-address-bdateContainer div-bdate-conttainer">
+                        <label>Birth Date:</label>
+                        <input placeholder="MM / DD /  YY"/>
+                    </div>
+                </div>
+             
+                <!-- HOLDS PROGRAM, CIVIL STATUS, PROFILE PICTURE -->
+                <div class="div-form-program-cvstatus-pfpContainer">
+                    <!-- program -->
+                    <div class="div-label-input-program-cvstatus-pfpContainer div-program-container">
+                        <label>Program Selection:</label>
+                        <select>
+                            <option value="">Click here</option>
+                            <option value="1">Bachelor of Science in Civil Engineering</option>
+                            <option value="2">Bachelor of Science in Information Systems</option>
+                            <option value="3">Bachelor of Science in Nursing</option>
+                            <option value="4">Bachelor of Science in Psychology</option>
+                        </select>
+                    </div>
+
+                    <!-- civil status -->
+                     <div class="div-label-input-program-cvstatus-pfpContainer div-cvstatus-container">
+                        <label>Civil Status</label>
+                        <input type="text"/>
+                     </div>
+
+                     <!-- profile picture -->
+                      <div class="div-label-input-program-cvstatus-pfpContainer div-pfp-container">
+                        <label>Upload Picture:</label>
+                        <input type="file"/>
+                      </div>
+                </div>
+                
+                
+    </body>
+</html>
