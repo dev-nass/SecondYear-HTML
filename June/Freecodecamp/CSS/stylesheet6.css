@@ -15,6 +15,7 @@
 body {
     background-color: var(--clr-white);
     font-family: sans-serif;
+    font-size: 16px;
     height: 100vh;
     width: 100%;
 }
@@ -46,7 +47,7 @@ fieldset {
 /* HOLDS ADDRESS, BIRTH DATE TFIELDS */
 .div-form-address-bdateContainer,
 /* HOLDS PROGRAM, CIVIL STATUS, PROFILE PICTURE */
-.div-form-program-cvstatus-pfpContainer{
+.div-form-cvstatus-pfpContainer{
     /* border: solid 1px yellow; */
     display: flex;
     flex-direction: row; /* allows the TFIELDS to be on the same straight line when the screen is large enough to do so */
@@ -72,7 +73,7 @@ input {
 
 /* SHARED DIV OF AGE, RELIGION, CONTACT NUMBER TFIELDS */
 .div-age-religion-conumber-container {
-    margin: 0 0.10rem;
+    margin: 0 0.3rem;
 }
 
 .div-age-container {
@@ -100,21 +101,47 @@ input {
     width: 30%;
 }
 
-.div-label-input-program-cvstatus-pfpContainer {
-    margin: 0 0.3rem;
+/* PARENT OF TWO DIVs */
+.div-parent-of-two {
+    /* border: solid 1px cyan; */
+    display: flex;
+    flex-direction: row;  
+    padding: 0 0.2rem;
+    width: 100%;
 }
 
+/* the FIRST CHILD */
+/* HOLDS THE PROGRAM */
+.div-form-programContainer{
+    /* border: solid 1px red; */
+    width: 50%;
+}
+
+/* used on PROGRAM */
 select {
     border: solid 1px var(--clr-green);
     height: 22px;
+    width: 100%;
+}
+
+/* the SECOND CHILD */
+/* HOLDS THE CVSTATUS AND PFP */
+.div-form-cvstatus-pfpContainer {
+    /* border: solid 1px red; */
+    display: flex;
+    width: 50%;
 }
 
 .div-cvstatus-container {
-    width: 34%;
+  margin: 0 0.5rem;
 }
+
 
 /* DEVICES BELOW 800 WILL EXP CHANGES */
 @media (max-width: 800px) {
+    body {
+        font-size: 14px;
+    }
 
     .form-main {
         /* border: solid 1px red; */
@@ -160,5 +187,48 @@ select {
 
     .div-bdate-conttainer {
         width: 30%;
+    }   
+}
+
+/* ENSURE THAT ALL TEXTFIELD ARE 100% */
+/* DEVICES BELOW 445 WILL EXP CHANGES */
+@media (max-width: 445px) {
+    .div-age-container {
+        width: 10%;
+    }
+
+    .div-religion-container {
+        width: 40%;
+    }
+
+    .div-conumber-container {
+        width: 50%; 
+    }
+
+    /* PARENT OF CHILD DIVs */
+    .div-parent-of-two {
+        flex-direction: column;
+    }
+
+    /* FIRST CHILD */
+    /* HOLDS THE PROGRAM */
+    .div-form-programContainer {
+        width: 100%;
+    }
+
+    /* SECOND CHILD */
+    /* HOLDS THE CV STATUS PFP */
+    .div-form-cvstatus-pfpContainer {
+        width: 100%;
+    }
+
+    /* cv status container */
+    .div-cvstatus-container {
+        margin-left: 0;
     }
 }
+
+
+
+
+
