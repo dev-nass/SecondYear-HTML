@@ -1,0 +1,164 @@
+:root {
+    --clr-green: #14532d;
+    --clr-red: rgb(198, 7, 7);
+    --clr-white: #f5f6f7; /* consistent color white */
+    --clr-yellow: #fbbf24;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    line-height: calc(1em + 0.5rem); /* makes the line-height relative to the font size */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-white);
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    background-color: var(--clr-green);
+    color: var(--clr-white);
+    min-width: 300px;
+}
+
+.header h1, .header p {
+    text-align: center;
+}
+
+.form-main  {
+    margin: 0 auto;
+    max-width: 800px;
+    min-width: 300px;
+}
+
+fieldset {
+    border: none;
+}
+
+/* HOLDS ALL THE NAME TFIELDS */
+.div-form-nameFieldsContainer, 
+/* HOLDS AGE, RELIGION, CON. NUMBER TFIELDS */
+.div-form-age-religion-coNumberContainer, 
+/* HOLDS ADDRESS, BIRTH DATE TFIELDS */
+.div-form-address-bdateContainer,
+/* HOLDS PROGRAM, CIVIL STATUS, PROFILE PICTURE */
+.div-form-program-cvstatus-pfpContainer{
+    /* border: solid 1px yellow; */
+    display: flex;
+    flex-direction: row; /* allows the TFIELDS to be on the same straight line when the screen is large enough to do so */
+    width: 100%; /* occupies the whole width of the form */
+}
+
+/* SHARED DIV OF FIRST, MIDDLE AND LAST NAME TFIELDS */
+.div-label-input-container {
+    /* border: solid 1px blue; */
+    padding: 0 0.3rem;
+    width: 35%;
+}
+
+label {
+    display: block;
+    padding: 0.3rem 0.3rem;
+}
+
+input {
+    border: solid 1px var(--clr-green);
+    width: 100%;
+}
+
+/* SHARED DIV OF AGE, RELIGION, CONTACT NUMBER TFIELDS */
+.div-age-religion-conumber-container {
+    margin: 0 0.10rem;
+}
+
+.div-age-container {
+    width: 20%;
+}
+
+.div-religion-container {
+    width: 50%;
+}
+
+.div-conumber-container {
+    width: 30%;
+}
+
+/* SHARED CONTAINER OF ADDRESS AND BIRTH DATE TFIELDS */
+.div-label-input-address-bdateContainer {
+    margin: 0 0.3rem;
+}
+
+.div-address-conttainer {
+    width: 70%;
+}
+
+.div-bdate-conttainer {
+    width: 30%;
+}
+
+.div-label-input-program-cvstatus-pfpContainer {
+    margin: 0 0.3rem;
+}
+
+select {
+    border: solid 1px var(--clr-green);
+    height: 22px;
+}
+
+.div-cvstatus-container {
+    width: 34%;
+}
+
+/* DEVICES BELOW 800 WILL EXP CHANGES */
+@media (max-width: 800px) {
+
+    .form-main {
+        /* border: solid 1px red; */
+        margin: 0 auto;
+        width: 100vw;
+    }
+
+    /* HOLDS ALL THE NAME TFIELDS */
+    .div-form-nameFieldsContainer {
+        flex-direction: column; /* stack TFIELDS on top of each other when the screen size shrinks to 800 */
+    }
+
+    /* SHARED DIV OF FIRST, MIDDLE AND LAST NAME TFIELDS */
+    .div-label-input-container {
+        width: 100%; /* makes the TFIELD to go down and occupy the whole space below the LABEL */
+    }
+
+    /* SHARED DIV OF AGE, RELIGION, CONTACT NUMBER TFIELDS */
+    .div-age-religion-conumber-container {
+        margin: 0 0.3rem;
+    }
+
+    .div-age-container {
+        width: 20%;
+    }
+
+    .div-religion-container {
+        width: 50%;
+    }
+
+    .div-conumber-container {
+        width: 30%; 
+    }
+
+    /* SHARED CONTAINER OF ADDRESS AND BIRTH DATE TFIELDS */
+    .div-label-input-address-bdateContainer {
+        margin: 0 0.3rem;
+    }
+
+    .div-address-conttainer {
+        width: 70%;
+    }
+
+    .div-bdate-conttainer {
+        width: 30%;
+    }
+}
