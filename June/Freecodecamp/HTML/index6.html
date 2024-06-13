@@ -6,7 +6,8 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>KLD REGISTRATION</title>
-        <link href="css/stylesheet5.css" rel="stylesheet"/>
+        <!-- <link href="css/stylesheet5.css" rel="stylesheet"/> -->
+         <link href="css/stylesheet6.css" rel="stylesheet"/>
     </head>
     <body>
         <header class="header">
@@ -72,33 +73,44 @@
                     </div>
                 </div>
              
-                <!-- HOLDS PROGRAM, CIVIL STATUS, PROFILE PICTURE -->
-                <div class="div-form-program-cvstatus-pfpContainer">
-                    <!-- program -->
-                    <div class="div-label-input-program-cvstatus-pfpContainer div-program-container">
-                        <label>Program Selection:</label>
-                        <select>
-                            <option value="">Click here</option>
-                            <option value="1">Bachelor of Science in Civil Engineering</option>
-                            <option value="2">Bachelor of Science in Information Systems</option>
-                            <option value="3">Bachelor of Science in Nursing</option>
-                            <option value="4">Bachelor of Science in Psychology</option>
-                        </select>
+                <!-- HOLDS THE 2 DIVS -->
+                <div class="div-parent-of-two">
+
+                    <!-- FIRST CHILD -->
+                    <!-- HOLDS PROGRAM -->
+                    <div class="div-form-programContainer">
+                        <!-- program -->
+                        <div class="div-label-input-programContainer div-program-container">
+                            <label>Program Selection:</label>
+                            <select>
+                                <option value="">Click here</option>
+                                <option value="1">Bachelor of Science in Civil Engineering</option>
+                                <option value="2">Bachelor of Science in Information Systems</option>
+                                <option value="3">Bachelor of Science in Nursing</option>
+                                <option value="4">Bachelor of Science in Psychology</option>
+                            </select>
+                        </div>
                     </div>
+                
+                    <!-- SECOND CHILD -->
+                    <!-- HOLDS THE CV STATUS AND PFP -->
+                    <div class="div-form-cvstatus-pfpContainer">
+                        <!-- civil status -->
+                        <div class="div-label-input-cvstatus-pfpContainer div-cvstatus-container">
+                            <label>Civil Status</label>
+                            <input type="text"/>
+                        </div>
 
-                    <!-- civil status -->
-                     <div class="div-label-input-program-cvstatus-pfpContainer div-cvstatus-container">
-                        <label>Civil Status</label>
-                        <input type="text"/>
-                     </div>
-
-                     <!-- profile picture -->
-                      <div class="div-label-input-program-cvstatus-pfpContainer div-pfp-container">
+                        <!-- profile picture -->
+                        <div class="div-label-input-cvstatus-pfpContainer div-pfp-container">
                         <label>Upload Picture:</label>
-                        <input type="file"/>
-                      </div>
-                </div>
-                
-                
+                            <input type="file"/>
+                        </div>                    
+                    </div>   
+                </div>      
+
+
+            </fieldset>
+        </form>
     </body>
 </html>
