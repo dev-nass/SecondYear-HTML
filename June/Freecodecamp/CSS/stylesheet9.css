@@ -1,0 +1,114 @@
+/* CSS: Typography Nutrition Label */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Open Sans, sans-serif;
+}
+
+/* MAIN DIV */
+.label {
+    border: solid 2px black;
+    margin: 20px auto;
+    padding: 0 7px;
+    width: 270px;
+}
+
+header h1 {
+    letter-spacing: 0.15px;
+    margin: -4px 0;
+    text-align: center;
+}
+
+p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+/* DIVIDER DIV | horizontal line */
+.divider {
+    border-bottom: solid 1px #888989;
+    margin: 2px 0;
+}
+
+/* used on texts that has to be BOLD  */
+.bold {
+    font-weight: 800;
+}
+
+.large {
+    height: 10px;
+}
+
+.medium {
+    height: 5px;
+}
+
+.large, .medium {
+    background-color: black;
+    border: 0;
+}
+
+/* MAIN CONTENT DIV */
+.calories-info {
+    align-items: flex-end;
+    border: solid 1px red;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* used on "Amount per serving" text */
+.small-text {
+    font-size: 0.85rem;
+}
+
+/* Amount per serving text */
+.calories-info h2 {
+    margin: 0;
+}
+
+/* Caloriest text */
+.left-container p {
+    font-size: 2em;
+    font-weight: 700;
+    margin: -5px -2px;
+}
+
+/* 230 text */
+.calories-info span {
+    border: solid 1px black;
+    font-size: 2.4em;
+    font-weight: 700;
+    margin: -7px -2px;/* use to set the text in place */
+}
+
+/* MOVES TEXT TO THE RIGHT */
+.right {
+    justify-content: flex-end;
+}
+
+/* INDENTS TEXT */
+.indent {
+    margin-left: 1em;
+}
+
+/* Total Fat 8g   10% text */
+/* Saturated Fat 1g   5% text */
+/* SELECTS the same element that doesn't have that ID */
+.daily-value p:not(.no-divider) {
+    border-bottom: solid 1px #888989;
+}
+
+.double-indent {
+    margin-left: 2em;
+}
+
+.note {
+    font-size: 0.6rem;
+    margin: 5px 0;
+    padding: 0 8px;
+    text-indent: -8px;
+}
