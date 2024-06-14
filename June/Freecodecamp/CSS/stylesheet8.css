@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f6f7;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: #0a0a23;
+    border-bottom: 4px solid #fdb347;
+    color: #fff;
+    padding: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.gallery {
+    align-items: center;
+    /* border: solid 10px red; */
+    display: flex;
+    gap: 16px; /* gives GAP for every picture */
+    flex-direction: row; /* ensures that the CAT IMG are on a ROW on larger screen */
+    flex-wrap: wrap; /* ensure that stock them on the same ROW when there's enough space */
+    justify-content: center;
+    margin: 0 auto; /* centers the DIV on LARGER SCREENS */
+    max-width: 1400px; /* wont EXPAND the DIV on screen larger than the set px; ENSURE content distants on larger screens */
+    padding: 20px 10px;
+}
+
+/* THE MAIN DIV */
+.gallery img {
+    /* border: solid 5px red; INCASE THE IMG SRC FAILED TO LOAD */
+    border-radius: 10px;
+    height: 300px;
+    max-width: 350px; /* BUT don't let that 100% exceed 350px */
+    object-fit: cover; /* tells the image to fill the image container while maintaing aspect ratio */
+    width: 100%; /* tells the BROWSER that the IMG will have 100% of the screen in whatever resolution */
+
+    -webkit-transition: margin 0.2s ease-out;
+    -moz-transition: margin .2s ease-out;
+    -o-transition: margin 0.2s ease-out;
+}
+
+/* I JUST ADDED THIS */
+img:hover {
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+/* INCLUDED WITHIN THE COURSE */
+/* TRY REMOVING THIS AND NOTICE THE LAST IMAGE ON 2COLUMN || MODE */
+.gallery::after{
+    content: "";
+    width: 350px;
+}
