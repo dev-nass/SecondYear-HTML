@@ -1,0 +1,57 @@
+<!-- HTML SURVEY FORM: CERTIFICATION -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- look same on different screen sizes -->
+        <title></title>
+        <link href="css/stylesheet4.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1 id="title">KLD REGISTRATION FORM</h1>
+        <p id="description">Kindly fill out the form with the utmost integrity</p>
+        <!-- FORM ELEMENT -->
+        <form id="survey-form">
+            <!-- FIRST FIELDSET: NAME, EMAIL, NUMBER -->
+            <fieldset class="first-fieldset">
+                <label for="name" id="name-label">Enter your name: <input id="name" placeholder="First Name, Middle Name, Last Name" required type="text"/></label>
+                <label for="email" id="email-label">Enter your email:<input id="email" placeholder="freecodecamp@gmail.com" required type="email"/></label>
+                <label for="number" id="number-label">Enter your number:<input id="number" max="9" min="0" placeholder="0123456789" required type="number"/></label>
+            </fieldset>
+            <!-- SECOND FIELDSET: DROPDOWN  -->
+            <fieldset>
+                 <!-- DROPDOWN SELECT: SELECTION OF PROGRAM -->
+                <legend>Select your program (required)</legend>
+                <select id="dropdown">
+                    <option value="">Select your program</option>
+                    <option value="1">Bachelor of Science in Civil Engineering</option>
+                    <option value="2">Bachelor of Science in Information Systems</option>
+                    <option value="3">Bachelor of Science in Nursing</option>
+                    <option value="4">Bachelor of Science in Psychology</option>
+                </select>
+            </fieldset>
+            <!-- THIRD FIELDSET: TYPE OF STUDENT (RADIO)  -->
+            <fieldset>
+                <label><input id="student-type-radio" name="user-type-input-radio" type="radio" value="freshie"/>Freshie</label>
+                <label><input id="student-type-radio" name="user-type-input-radio" type="radio" value="transferee"/>Transferee</label>
+            </fieldset>
+            <!-- FOURTH FIELDSET: COURSES THEY WANT TO APPLY (CHECKBOX) -->
+            <fieldset>
+                <legend>Courses you want to apply (required)</legend>
+                <label for="course-nstp"><input id="course-nstp" class="course" type="checkbox" value="NSTP"/>NSTP</label>
+                <label for="course-filipino"><input id="course-filipino" class="course" type="checkbox" value="Filipino"/>Filipino</label>
+                <label for="course-purposivecomm"><input id="course-purposivecomm" class="course" type="checkbox" value="Purposive"/>Purposive Communication</label>
+                <label for="course-mathanalysis"><input id="course-mathanalysis" class="course" type="checkbox" value="Math"/>Math Analysis</label>
+                <label for="course-artapp"><input id="course-artapp" class="course" type="checkbox" value="Art"/>Art Appreciation</label>
+            </fieldset>
+            <!-- FIFTH FIELDSET: REFERRER OF THE SCHOOL -->
+            <fieldset>
+                <label for="additional-saying">How did you know the school:
+                    <textarea col="30" id="additional-saying" placeholder="I live here. . ." rows="3"></textarea>
+                </label>
+            </fieldset>
+            <input id="submit" value="Submit" type="submit"/>
+        </form>
+    </body>
+</html>
