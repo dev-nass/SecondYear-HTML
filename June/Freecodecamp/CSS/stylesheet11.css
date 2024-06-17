@@ -1,0 +1,79 @@
+/* CSS: CODE ALONG FORM */
+/* https://youtu.be/moIHTT2XK9g?si=g_6amVMR0gce55aM */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(130, 106, 251);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 100vh;
+    padding: 20px; /* for smaller screen */
+    width: 100%;
+}
+
+.div-main-container {
+    background-color: #fff;
+    /* border: 1px solid red; */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+    max-width: 700px;
+    padding: 25px;
+    width: 100%; /* for smaller screens */
+}
+
+.div-all-textFields {
+    margin-top: 20px;
+}
+
+h2, p {
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5rem;  
+    font-weight: 500;
+}
+
+
+.div-one-textField  input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    color: #707070;
+    font-size: 1rem;
+    height: 50px;
+    margin-bottom: 8px;
+    outline: none;
+    padding: 0 15px; /* used to push the text inside, since the border-radius is adjusted */
+    position: relative;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: rgb(130, 106, 251);
+    border: 1px solid #ddd;
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 50px;
+    margin: 20px auto 0 auto;
+    outline: none;
+    width: 50%;
+}
+
+input[type="submit"]:hover {
+    transition: 0.4s;
+    filter: grayscale(60%);
+}
