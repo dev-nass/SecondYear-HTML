@@ -1,0 +1,201 @@
+/* CSS: Accessibility by Building a Quiz */
+
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    background-color: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+}
+
+header {
+    align-items: center;
+    background-color: #1b1b32;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    position: fixed; /* fixed its position somewhere */
+    top: 0; /* fixed it on top */
+    width: 100%;
+}
+
+#logo {
+    aspect-ratio: 35/4; /* idk, but changes the size of the freeCodeCamp Logo img */
+    background: #0a0a23;
+    padding: 0.4rem;
+    width: max(100px, 18vw); /* the width of the IMG will be 100px if the viewport width is less than 1000 PIXELS, and it will be 18vw or 18% if its greater than 1000 PIXELS  */
+}
+
+h1 {
+    color: #f1be32;
+    font-size: min(5vw, 1.2em); /* idk, but changes the size of the HTML/CSS Quiz text */
+    text-align: center;
+}
+
+h1, 
+h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+    border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
+}
+
+nav {
+    /* border: 1px solid red; */
+    height: 50px;
+    max-width: 300px; /* dont GROW more than 300px */
+    width: 50%; /* but if less than 300px be 50% */
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+
+    /* precent overlow -- from FreeCodeCamp */
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+}
+
+nav > ul > li {
+    color: #dfdfe2;
+    display: block;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+}
+
+nav > ul > li:hover {
+    background-color: #dfdfe2;
+    color: #1b1b32;
+    cursor: pointer;
+}
+
+li > a {
+    color: inherit; /* inherit the color of <li> regardless of changes */
+    text-decoration: none;
+}
+
+main {
+    padding-top: 25px; /* remove this and the Student Info text will vanish */
+}
+
+section {
+    margin: 0 auto 10px auto;
+    max-width: 600px; /* dont grow MORE than 600px */
+    width: 80%; /* if less than 600px, take 80% */
+}
+
+/* DIVs that contains the (Name,Email, D.O.B.) */
+.info {
+    /* border: 1px solid red; */
+    padding: 10px 0 0 5px;
+}
+
+.info > label,
+.info > input {
+    display: inline-block;
+}
+
+.info label {
+    /* border: 1px solid yellow; */
+    min-width: 55px;
+    text-align: right; /* pushes the text slightly to the right */
+    width: 10%;
+}
+
+.info > input {
+    text-align: left;
+    width: 50%;
+}
+
+/* from freeCodeCamp */
+/* just to make HTML Questions more neat */
+.question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+fieldset {
+    border: none;
+}
+  
+.question {
+    border: none;
+    padding-bottom: 0;
+}
+
+.answers-list {
+    list-style: none;
+    padding: 0;
+}
+
+.formrow {
+    /* border: 1px solid red; */
+    margin-top: 30px;
+    padding: 0px 15px;
+}
+
+/* add cotent before the <p>1</p>, making it Question #1 */
+p:before {
+    content: "Question #";
+}
+
+/* <span> Date of Birth </span> makes it invisible */
+/* from freeCodeCamp */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+input[type="submit"] {
+    background-color: #d0d0d5;
+    border: 3px solid #3b3b4f;
+    display: block;
+    font-size: 23px;;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+}
+
+footer {
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+
+footer,
+footer a {
+  color: #dfdfe2;
+}
+
+address {
+    text-align: center;
+    padding: 1px;
+}
