@@ -1,0 +1,107 @@
+<!-- HTML: Accessibility by Building a Quiz -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- look same on different screen sizes -->
+        <meta name="description" content="freeCodeCamp Accessibility Quiz practice project"/>
+        <title>Accessibility Quiz Project</title>
+        <link href="css/stylesheet10.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!-- HEADER -->
+        <header>
+            <img alt="freeCodeCamp" id="logo" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg">
+            <h1>HTML/CSS Quiz</h1>
+            <nav>
+                <ul>
+                    <li><a accesskey="z" href="#student-info">INFO</a></li>
+                    <li><a accesskey="x" href="#html-questions">HTML</a></li>
+                    <li><a accesskey="c" href="#css-questions">CSS</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- MAIN CONTENT -->
+        <main>
+            <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
+                <!-- FIRST SECTION: STUDENT INFO -->
+                <section aria-labelledby="student-info" role="region">
+                    <h2 id="student-info">Student Info</h2>
+                    <!-- name div -->
+                    <div class="info">
+                        <label for="name">Name: </label><input id="name" name="name" placeholder="FN / MN / LN" type="text"/>
+                    </div>
+                    <!-- email div -->
+                    <div class="info">
+                        <label for="email">Email: </label><input id="email" name="email" type="email"/>
+                    </div>
+                    <!-- date of birth div -->
+                    <div class="info">
+                        <label for="date-of-birth">D.O.B. <span class="sr-only">(Date of Birth)</span></label><input id="date-of-birth" name="date-of-birth" type="date"/>
+                    </div>
+                </section>
+                <!-- SECOND SECTION: HTML QUESTIONS -->
+                <section aria-labelledby="html-questions" role="region">
+                    <h2 id="html-questions">HTML Questions</h2>
+                    <!-- html questions -->
+                    <!-- question 1 -->
+                    <div class="question-block">
+                        <p>1</p>
+                        <fieldset class="question" name="question">
+                            <legend>True / False</legend>
+                            <ul class="answers-list">
+                                <li><label for="q1-a1"><input id="q1-a1" name="q1" type="radio" value="True"/>True</label></li>
+                                <li><label for="q1-a2"><input id="q1-a2" name="q1" type="radio" value="False"/>False</label></li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                    <!-- question 2 -->
+                    <div class="question-block">
+                        <p>2</p>
+                        <fieldset class="question" name="question">
+                            <legend>Tama / Mali</legend>
+                            <ul class="answers-list">
+                                <li><label for="q2-a1"><input id="q2-a1" name="q2" type="radio" value="True"/>True</label></li>
+                                <li><label for="q2-a2"><input id="q2-a2" name="q2" type="radio" value="False"/>False</label></li>
+                            </ul>
+                        </fieldset>
+                    </div>
+                </section>
+                <!-- THIRD SECTION: CSS QUESTIONS -->
+                <section aria-labelledby="css-questions" role="region">
+                    <h2 id="css-questions">CSS Questions</h2>
+                    <div class="formrow">
+                        <div class="question-block">
+                            <label for="select-q1">What the meaning of REM unit?</label>
+                        </div>
+                        <div class="answer">
+                            <select  id="select-q1" name="select-q1" required>
+                                <option value="">Select an option</option>
+                                <option value="">Rot Ehimynem</option>
+                                <option value="">Root Em</option>
+                            </select>
+                        </div>
+
+                        <div class="question-block">
+                            <label for="textarea-question">What the meaning of EM unit?</label>
+                        </div>
+                        <div class="answer">
+                            <textarea cols="30" id="textarea-question" name="textarea-question" placeholder="I wanna be a millionare..." rows="3"></textarea>
+                        </div>
+                    </div>
+                </section>
+                <input type="submit" value="Send"/>
+            </form>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <address>
+                <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+                San Francisco<br />
+                California<br />
+                USA
+            </address>
+        </footer>
+    </body>
+</html>
