@@ -1,0 +1,32 @@
+/* CSS: STROKE DESIGN */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: #000119;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    background: linear-gradient(90deg, #ff00d2, #fed90f, #00a2ff, #09f1b8);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16); /* the one the makes the STROKE happen */
+    -webkit-background-clip: text;
+    color: #000119;
+    font-size: 22vmin;
+    font-weight: 700;
+    padding: calc((1em / 16) / 2);
+    letter-spacing: calc(1em / 8);
+}

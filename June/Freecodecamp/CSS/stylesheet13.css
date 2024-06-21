@@ -31,6 +31,7 @@ main {
 .div-section-one {
     /* border: 1px solid yellow; */
     background-color: #262626;
+    /* background: linear-gradient(70deg, pink, red, blue); */
     width: 100%;
 }
 
@@ -105,24 +106,26 @@ main {
     padding: 20px;
 }
 
+/* About Vinh Giang text */
 .div-section-two-content h2 {
     font-size: 1.8em;
     text-align: center;
 }
 
-.div-first-row,
-.div-second-row {
+/* HOLDS THE TALENT BOXES; ADJUTST  TO ROW OR COLUMN */
+.div-first-row {
     /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* main reason why the its adjustable to column */
     gap: 10px;
     justify-content: center;
     margin: 10px auto;
 }
 
+/* THE BOXES THAT HOLDS EACH TALENT; shared CLASS */
 .talent {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* offSetX, offSetY, blurRadius, color */
     display: flex;
     flex-direction: column;
     height: 300px;
@@ -133,7 +136,7 @@ main {
 
 .div-talent-image {
     /* border: 1px solid red; */
-    height: 50%;
+    height: 50%; /* sets the  */
 }
 
 .div-talent-image img {
@@ -185,3 +188,40 @@ main {
         width: 35ch;
     }
 }
+
+
+
+
+
+
+
+/* PRIMARRILY USE FOR VISUALIZATION */
+
+/* FIRST SECTION: WIDE */
+.div-section-one,
+/* FIRST SECTION: CENTERED */
+.div-section-one-content,
+/* HOLDS THE IMAGE: LEFT */
+.div-vinh-image img,
+/* HOLDS THE TEXTS: RIGHT */
+.div-vinh-description {
+    speak-as: 1; /* so dont error */
+    /* border: 1px solid aqua; */
+
+}
+
+/* SECOND SECTION: WIDE */
+.div-section-two,
+/* SECOND SECTION CONTENT: CENTERED */
+.div-section-two-content,
+/* HOLDS THE TALENT BOXES; ADJUST TO ROW  OR COLUMN */
+.div-first-row,
+/* THE BOXES THAT HOLDS EACH TALENT; shared CLASS */
+.talent,
+.div-talent-image,
+.div-talent-description {
+    speak-as: 1; /* so dont error */
+    /* border: 1px solid red */
+
+}
+
