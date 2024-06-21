@@ -1,0 +1,72 @@
+/* CSS: KLD's Hymn, Mission, Vision */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+:root {
+    --clr-green: #14532d;
+    --clr-white: #f5f6f7;
+    --clr-border: linear-gradient(180deg, yellow, gold, orange);
+    --max-size: 1229px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    color: var(--clr-white);
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    width: 100%;
+}
+
+/* FIRST SECTION: WIDE */
+.section-section-one {
+    background-color: gold;
+    background-color: var(--clr-green);
+    padding: 1.5em;
+}
+
+/* targets all H1 including the HYMN, MISSION, VISION texts */
+.section-section-one h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.8em;
+}
+
+/* FIRST SECTION: CENTERED */
+.div-section-one-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: var(--max-size);
+    width: 100%;
+}
+
+/* SEPARATELY holds the HYMN, MISSION, VISION */
+.box {
+    border: 5px solid goldenrod;
+    height: 100%;
+    padding: 1em;
+    width: 40ch;
+}
+
+/* moves the VISION box aligned to the hymn  */
+.div-section-one-content::after {
+    content: "";
+    width: 40ch;
+}
+
+/* experiment <span> element */
+.span-underline {
+    text-decoration: underline;
+}
