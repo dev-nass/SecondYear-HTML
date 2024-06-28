@@ -1,0 +1,182 @@
+/* CSS: Pseudo Selector: Balance Sheet */
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    color: #0a0a23;
+    font-family: sans-serif;
+}
+
+/* targets span tha has this attribute (class in this case) equal to "sr-only */
+span[class~="sr-only"] {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /* make invisble the text (freeCodeCamp) 1/2 */
+    clip-path: inset(50%) !important; /* make invisble the text (freeCodeCamp) 2/2 */
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important; /* prevent the hidden text from overflowgin (freeCodeCamp) 1/2 */
+    padding: 0 !important; /* ensure that they are not only invisible, but not even altering the any formating within the page 1/3 */
+    position: absolute !important; /* ensure that they are not only invisible, but not even altering the any formating within the page 1/3 */
+    white-space: nowrap !important; /* prevent the hidden text from overflowgin (freeCodeCamp) 2/2 */
+    width: 1px !important;
+}
+
+h1 {
+    margin: 0 auto;
+    max-width: 37.25rem;
+    padding: 1.5rem 1.25rem;
+}
+
+h1 .flex {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+}
+
+h1 .flex span:first-of-type {
+    border: 1px solid blue;
+    font-size: 0.7em;
+}
+
+h1 .flex span:last-of-type {
+    font-size: 1.2em;
+}
+
+section {
+    border: 2px solid #d0d0d5;
+    margin: 0 auto;
+    max-width: 40rem;
+}
+
+#years {
+    background-color: #0a0a23;
+    border: 1px solid red;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* target each span that has a class, regardles what it is */
+#years span[class] {
+    border: 1px solid yellow;
+    font-weight: bold;
+    width: 4.5em;
+    text-align: right;
+}
+
+.table-wrap {
+    padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/* select all <span> that doesn't have the same class */
+/* in this case, most of the content of the table are within span */
+/* hence, they are the ones selected to apply this changes into */
+/* this was removes by freeCodeCamp step 64
+span:not(.sr-only) {
+    font-weight: normal;
+}
+*/
+
+table {
+    border: 1px solid red;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+table caption {
+    color: #256eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    left: 0.5rem;
+    position: absolute;
+    top: -2.25rem;
+}
+
+tbody td {
+    max-width: 4rem;
+    min-width: 4rem;
+    width: 100vw;
+}
+
+tbody th {
+    width: calc(100% - 12rem);
+}
+
+/* selects <tr> elements that has ONLY this class */
+/* the container of "Total" text */
+tr[class="total"] {
+    font-weight: bold;
+    border-bottom: 4px double #0a0a23;
+}
+
+/* "The actual "Total" text */
+tr[class="total"] th {
+    border: 1px solid red;
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+/* selects <tr> element that CONTAIN this class, meaning they may have another one class */
+tr.total td {
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+tr.total td:nth-of-type(3) {
+    /* border: 1px solid red; */
+    padding-right: 0.5rem;
+}
+
+tr.total:hover {
+    background-color: #99c9ff;
+}
+
+/* selects <td> that ONLY has this class */
+td[class="current"] {
+    /* border: 1px solid yellow; */
+    font-style: italic;
+}
+
+/* selects <tr> that ONLY has this class */
+tr[class="data"] {
+    background: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+/* selects <th> that's within <tr> element that CONTAIN this class, meaning it may have another class */
+tr.data th {
+    text-align: left;
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+/* selects the <span class="description"> that's nested on <th> elements */
+tr.data th .description {
+    /* border: 1px solid red; */
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    margin-right: -13.5rem;
+    padding: 1rem 0 0.75rem;
+}
+
+tr.data td {
+    /* border: 1px solid red; */
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.data td:last-of-type {
+    border: 1px solid red;
+    padding-right: 0.5rem;
+}
