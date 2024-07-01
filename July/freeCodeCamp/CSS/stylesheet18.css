@@ -1,0 +1,94 @@
+/* CSS: Building a Piano */
+
+/* 
+    KEY TAKEAWAYS:
+
+    - Usage of CSS reset is applied
+    - The proper application of absolute positioning to a child, and a relative to its parent
+    - MediaQuery is used, max-width for less-than ( < ) screen sizes, and min-width for greater0-than screen sizes.
+    - Logical AND operator
+
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+#piano {
+    background-color: #00471b;
+    border-radius: 10px;
+    height: 290px;
+    margin: 80px auto;
+    padding: 90px 20px 0 20px;
+    position: relative;
+    width: 992px;
+}
+
+/* the freeCodeCamp image above */
+.logo {
+    position: absolute;
+    top: 23px;
+    width: 200px;
+}
+
+.keys {
+    background-color: #040404;
+    height: 180px;
+    padding-left: 2px;
+    overflow: hidden;
+    width: 949px;
+}
+
+/* the WHITE keys shared class */
+.key {
+    background-color: #ffffff;
+    border-radius: 0 0 3px 3px;
+    height: 175px;
+    margin: 2px;
+    float: left; /* cause of the MAGIC, the <div class"key"> suddenly text to each other */
+    position: relative;
+    width: 41px;
+}
+
+/* the BLACK keys shared class */
+.key.black--key::after {
+    background-color: #1d1e22;
+    border-radius: 0 0 3px 3px;
+    content: "";
+    height: 100px;
+    left: -18px;
+    position: absolute;
+    width: 30px
+}
+
+/* 768 WIDE andd BELOW */
+@media(max-width: 768px) {
+    #piano {
+        width: 358px;
+    }
+
+    .keys {
+        width: 318px;
+    }
+
+    .logo {
+        width: 150px;
+    }
+}
+
+/* application of AND logical operator */
+/* handle screen larger than 768 but less than 1199 */
+@media(min-width: 769px) and (max-width: 1199px) {
+    #piano {
+        background-color: red;
+        width: 675px;
+      }
+    
+      .keys {
+        width: 633px;
+      }
+}
