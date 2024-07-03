@@ -108,7 +108,7 @@ section {
 }
 
 .info label {
-    /* border: 1px solid yellow; */
+    border: 1px solid yellow;
     min-width: 55px;
     text-align: right; /* pushes the text slightly to the right */
     width: 10%;
