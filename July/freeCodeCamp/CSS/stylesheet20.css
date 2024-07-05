@@ -1,0 +1,375 @@
+/* CSS: Building a City Skyline */
+
+/*  KEY TAKEAWAYS:
+    - :root selector are the highest level of selector
+    - repeating-linear-gradient();
+    - transition of one color to another:
+      repeating-linear-gradient(
+        blue 0%,
+        blue 6%,
+        red 6%,
+        red 9
+      );
+    - stock up of  repeating-linear-gradient after another:
+      repeating-linear-gradient(), repeating-linear-gradient()
+    - radial-gradient();
+    - cricle closest-corner
+*/
+
+/* HIGHEST LEVEL SELECTOR */
+/* step 25 */
+:root {
+    --building-color1: #aa80ff;
+    --building-color2: #66cc99;
+    --building-color3: #cc6699;
+    --building-color4: #538cc6;
+
+    --window-color1: #bb99ff;
+    --window-color2: #8cd9b3;
+    --window-color3: #d98cb3;
+    --window-color4: #8cb3d9;
+}
+
+* {
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* <DIV class="background-buildings"> */
+.background-buildings {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%
+}
+
+.building-wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/*  used in: 
+    - .bb4c that contains .bb4-window
+*/
+.window-wrap {
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sky {
+    background: radial-gradient(
+        circle closest-corner at 15% 15%,
+        #ffcf33 0%, 
+        #ffcf33 20%, 
+        #ffff66 21%, 
+        #bbeeff 100%
+    );
+}
+
+/* 1ST BUILDING */
+.bb1 {
+    height: 70%;
+    width: 10%;
+} 
+
+/* window */
+.bb1-window {
+    background: linear-gradient(var(--building-color1), var(--window-color1));
+    height: 10%;
+}
+
+/* child containers */
+.bb1a {
+    width: 70%;
+}
+
+.bb1b {
+    width: 80%;
+}
+
+.bb1c {
+    width: 90%;
+}
+
+.bb1d {
+    background: linear-gradient(
+        var(--building-color1) 50%, 
+        var(--window-color1));
+    height: 70%;
+    width: 100%;
+}
+
+/* 2ND BUILDING */
+.bb2 {
+    /* background-color: var(--building-color2, green); fallback value on backgroud-color */
+    height: 50%;
+    width: 10%;
+}
+
+
+.bb2a {
+    /* margin: auto; removed to make it look like a triangle 1/2 */
+    /* border-top: 1vw solid #000; removed to make it look like a triangle 2/2 */
+    border-bottom: 5vh solid var(--building-color2);
+    border-left: 5vw solid transparent;
+    border-right: 5vw solid transparent;
+}
+
+.bb2b {
+    background: repeating-linear-gradient(
+        var(--building-color2) 0%,
+        var(--building-color2) 6%,
+        var(--window-color2) 6%,
+        var(--window-color2) 9%
+    );
+    height: 100%;
+    width: 100%;
+}
+
+/* 3RD BUILDING */
+.bb3 {
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color3),
+        var(--building-color3),
+        var(--window-color3) 15%
+    );
+    height: 55%;
+    width: 10%;
+}
+
+/* 4TH BUILDING */
+.bb4 {
+    height: 58%;
+    width: 11%;
+}
+
+.bb4a {
+    background-color: var(--building-color4);
+    height: 10%;
+    width: 3%;
+}
+
+.bb4b {
+    background-color: var(--building-color4);
+    height: 5%;
+    width: 80%;
+}
+
+.bb4c {
+    background-color: var(--building-color4);
+    height: 85%;
+    width: 100%;
+}
+
+.bb4-window {
+    background-color: var(--window-color4);
+    height: 90%;
+    width: 18%;
+}
+
+
+
+
+/* <DIV class="foreground-buildings"> */
+.foreground-buildings {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* 1ST BUILDING */
+.fb1 {
+    /* background-color: var(--building-color4); */
+    height: 60%;
+    width: 10%;
+}
+
+.fb1a {
+    border-bottom: 7vh solid var(--building-color4);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+}
+
+.fb1b {
+    background-color: var(--building-color4);
+    height: 10%;
+    width: 60%;
+}
+  
+  .fb1c {
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color4) 0%,
+        var(--building-color4) 10%,
+        transparent 10%,
+        transparent 15%
+    ),
+    /* firstly shown in step 78 of 'Building a Skyline' */
+    repeating-linear-gradient(
+      var(--building-color4) 0%,
+      var(--building-color4) 10%,
+      var(--window-color4) 10%,
+      var(--window-color4) 90%
+    );
+    height: 80%;
+    width: 100%;
+}
+
+/* 2ND BUILDING */
+.fb2 {
+    /* background-color: var(--building-color3); */
+    height: 40%;
+    width: 10%;
+}
+
+.fb2a {
+    border-bottom: 10vh solid var(--building-color3);
+    border-left: 1vw solid transparent;
+    border-right: 1vw solid transparent;
+    width: 100%;
+}
+  
+.fb2b {
+    background-color: var(--building-color3);
+    height: 75%;
+    width: 100%;
+}
+
+.fb2-window {
+    background-color: var(--window-color3);
+    height: 100%;
+    width: 22%;
+}
+
+/* 3RD BUILDING */
+.fb3 {
+    /* background-color: var(--building-color1); */
+    height: 35%;
+    width: 10%;
+}
+
+.fb3a {
+    background-color: var(--building-color1);
+    height: 15%;
+    width: 80%;
+}
+
+.fb3-window {
+    background-color: var(--window-color1);
+    height: 80%;
+    width: 25%;
+}
+  
+.fb3b {
+    background-color: var(--building-color1);
+    height: 35%;
+    width: 100%;
+}
+
+/* 4TH BUILDING */
+.fb4 {
+    /* background-color: var(--building-color1); */
+    height: 45%;
+    left: 10%;
+    position: relative;
+    width: 8%;
+}
+
+.fb4a {
+    border-top: 5vh solid transparent;
+    border-left: 8vw solid var(--building-color1);
+}
+
+.fb4b {
+    background-color: var(--building-color1);
+    display: flex;
+    flex-wrap: wrap;
+    height: 89%;
+    width: 100%;
+}
+
+.fb4-window {
+    background-color: var(--window-color1);
+    border-radius: 50%;
+    height: 10%;
+    margin: 10%;
+    width: 30%;
+}
+
+/* 5TH BUILDING */
+.fb5 {
+    /* background-color: var(--building-color2); */
+    background: repeating-linear-gradient(
+        var(--building-color2) 0%,
+        var(--building-color2) 5%,
+        transparent 5%,
+        transparent 10%
+    ),  repeating-linear-gradient(
+        90deg,
+        var(--building-color2) 0%,
+        var(--building-color2) 12%,
+        var(--window-color2) 12%,
+        var(--window-color2) 44%
+    );
+    height: 33%;
+    position: relative;
+    right: 10%;
+    width: 10%;
+}
+
+/* 6TH BUILDING */
+.fb6 {
+    /* background-color: var(--building-color3); */
+    background: repeating-linear-gradient(
+        90deg,
+        var(--building-color3) 0%,
+        var(--building-color3) 10%,
+        transparent 10%,
+        transparent 30%
+    ), repeating-linear-gradient(
+        var(--building-color3),
+        var(--building-color3) 10%,
+        var(--window-color3) 10%,
+        var(--window-color3) 30%
+    );
+    height: 38%;
+    width: 9%;
+}
+
+@media(max-width: 1000px) {
+    :root {
+        --building-color1: #000;
+        --building-color2: #000;
+        --building-color3: #000;
+        --building-color4: #000;
+
+        --window-color1: #777;
+        --window-color2: #777;
+        --window-color3: #777;
+        --window-color4: #777;
+    }
+
+    .sky {
+        background: radial-gradient(
+            closest-corner circle at 15% 15%,
+            #ccc,
+            #ccc 20%,
+            #445 21%,
+            #223 100%
+        );
+    } 
+}
