@@ -1,0 +1,80 @@
+*, *::before, *::after {
+    box-sizing: borer-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-template-grid {
+    border: 1px solid red;
+    display: grid;
+    height: 80vh;
+    gap: 10px;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    /* grid-template-columns: repeat(4, 1fr); has to be OUT before using the areas */
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.first-child {
+    grid-area: one;
+}
+
+.second-child {
+    grid-area: two;
+}
+
+.third-child {
+    grid-area: three;
+}
+
+.fourth-child {
+    grid-area: four;
+}
+
+.fifth-child {
+    grid-area: five;
+}
+
+.section-child-grid {
+    background-color: red;
+}
+
+.main-template-grid {
+    grid-template-areas: 
+        'one one two five'
+        'three four four five';
+}
+
+@media (max-width: 700px) {
+    .main-template-grid {
+       grid-template-areas: 
+        'one one'
+        'two five'
+        'three five'
+        'four four';
+    }
+}
+
+@media (max-width: 400px) {
+    .main-template-grid {
+        grid-template-areas:
+        'one one'
+        'two two'
+        'three three'
+        'four four'
+        'five five';
+    }
+}
