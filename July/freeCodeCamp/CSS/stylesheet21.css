@@ -1,0 +1,214 @@
+/* CSS: Grid by Building a Magazine */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; /* equivalent to 10px */
+}
+
+body {
+    background-color: rgb(20, 30, 40);
+    color: linen;
+    font-family: Baskervville, serif;
+}
+
+h1 {
+    font-family: Anton, sans-serif
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: Raleway, sans-serif;
+}
+
+a {
+    color: linen;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    /* grid-template-columns: 1fr 94rem 1fr; the middle column is sized 94rem and left and right are fractional unit of the remaining space */
+    grid-template-columns: minmax(2rem, 1fr) minmax(min-content, 94rem) minmax(2rem, 1fr);
+    row-gap: 3rem;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+hr {
+    border: 1px solid rgba(120, 120, 120, 0.6);
+    margin: 1.5rem 0;
+}
+
+/* SECTION 1 */
+.heading {
+    border: 1px solid red;
+    display: grid;
+    grid-column: 2/3; /* child property; coz <main>, the parent, is display: grid */
+    grid-template-columns: repeat(2, 1fr); /* parent property; 2columns 1fr width IDK wut that is */
+    row-gap: 1.5rem;
+}
+
+/* <header> elment */
+.hero {
+    grid-column: 1 / -1;
+    position: relative;
+}
+
+/* <h1> element inside the <header class="hero"> */
+.hero-title  {
+    color: orangered;
+    font-size: 8rem;
+    text-align: center;
+}
+
+/* <p> element below <h1 class="hero-title> */
+.hero-subtitle {
+    color: orangered;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+/* <div> element that contains two <p> */
+.author {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+}
+
+/* <p> 1/2 */
+.author-name a:hover {
+    background-color: #306203;
+}
+
+/* <p> 2/2 */
+.publish-date {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* <div> element that holds the images of social media icons */
+.social-icons {
+    align-items: center;
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column; /* an explanation what on STEP 52 */
+}
+
+/* NOTE THIS PART!!!!!!!! */
+/* SECTION 2 */
+.text {
+    border: 1px solid rgb(13, 211, 175);
+    column-width: 25rem; /* a grid property accessible also for non grid display elements */
+    font-size: 1.8rem;
+    grid-column: 2/3;
+    letter-spacing: 0.6px;
+    text-align: justify; /* good for magazine style, but could be a hindrance for ppl with dyslexia */
+}
+
+/* NOTE THIS PART!!!!!!!!! */
+/* <p> element of <section="text"> */
+/* pseudo code that selects the first letter */
+.first-paragraph::first-letter {
+    color: orangered;
+    font-size: 6rem;
+    float: left; 
+    margin-right: 1rem;
+}
+
+/* <p class="quote"> */
+.quote {
+    color: #00beef;
+    font-family: Raleway, sans-serif;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.quote::before {
+    content: '" ';
+}
+
+.quote::after {
+    content: ' "';
+}
+
+/* SECTION 3 */
+.text-with-images {
+    column-gap: 3rem;
+    border: 1px solid rgb(247, 3, 255);
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 3rem;
+}
+
+.lists {
+    list-style-type: none;
+    margin-top: 2rem;
+}
+
+.lists li {
+    margin-bottom: 1.5rem;
+}
+
+.list-title,
+.list-subtitle {
+    color: #00beef;
+}
+
+/* aside element */
+.image-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 2rem; /* shorthand for column-gap and row-gap property; if TWO values are passed it is first assigned to row-gap then column-gap */
+    place-items: center;
+}
+
+.image-1, .image-3 {
+    grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 720px) {
+    /* aside element */
+    .image-wrapper {
+      grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* aside element */
+    .text-with-images {
+      grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hero-title {
+      font-size: 6rem;
+    }
+  
+    .hero-subtitle, .author, .quote, .list-title {
+      font-size: 1.8rem;
+    }
+  
+    .social-icons {
+      font-size: 2rem;
+    }
+  
+    .text {
+      font-size: 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .hero-title {
+      font-size: 4.5rem;
+    }
+}

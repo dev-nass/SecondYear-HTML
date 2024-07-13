@@ -1,0 +1,615 @@
+
+/* 
+    KEY TAKEAWAYS:
+    - Used mobile first approach; everything written above (outside) or media query are for smaller devices
+    - the burger logo gives the height for the whole <header> element
+    - It is also important to use margin top and bottom for all the <sections>
+    - FONT SIZES:
+       - 64px / 4em for the largest on the first section
+       - 40px / 2.5em for the heading of each subsequent sections
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Anton%7CBaskervville%7CRaleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+    --clr-black-bg: #322f46;
+    --clr-white: #f5f6f7;
+    --clr-orangered: orangered;
+
+    --clr-red: #d6001c;
+    --clr-yellow: #ffa400;
+    --clr-blueish: #009ca6;
+    --clr-orange: #ff620f;
+
+    --clr-gridOne: #7542c8;
+    --clr-gridTwo: #47556b;
+    --clr-gridTheeFive: #ffffff;
+    --clr-gridFour: #19202c;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    line-height: calc(1em + 0.5rem); /* makes the line-height relative to the font size */
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--clr-black-bg);
+    color: var(--clr-white);
+    font-family: Poppins, sans-serif;
+}
+
+a {
+    color: var(--clr-white);
+    font-style: none;
+    text-decoration: none;
+}
+
+
+/* HEADER SECTION */
+/* <HEADER> */
+#header {
+    /* border: 1px solid red; */
+    background-color: var(--clr-black-bg);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.3rem;
+    /* position: fixed; */
+    /* top: 0; */
+    /* left: 0; */
+    /* width: 100%; */
+    /* z-index: 1; */
+}
+
+/* <div> left side: holds the logo and the Nasty Burger text */
+.header-logo-container {
+    align-items: center;
+    /* border: 1px solid yellow; */
+    display: flex;
+    width: 85%;
+}
+
+#header-img {
+    /* border: 1px solid blue; */
+    height: 80px;
+}
+
+.header-logo-container h1 {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+/* <nav> element right: holds the ul and li elements */
+#nav-bar {
+    align-items: center;
+    /* border: 1px solid rgb(17, 255, 0); */
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+    width: 15%;
+}
+
+ul {
+    display: none;
+}
+
+.bars {
+    height: 3rem
+}
+
+
+/* MAIN SECTION */
+/* SECTIN 1: WIDE */
+.section-one {
+    background-color: rgba(255, 0, 0, 0.16);
+    height: 100%;
+    width: 100%;
+}
+
+/* section 1 contetn: centered */
+.section-one-content {
+    display: flex;   
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1229px;
+}
+
+/* first child */
+.heading-text {
+    align-items: center;
+    /* background: rgb(0, 255, 85); */
+    color: var(--clr-orangered);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    padding: 5rem 0 2rem 0;
+    width: 100%;
+}
+
+.heading-text h1 {
+    font-family: Anton, sans-serif;
+    font-size: 4em;
+    width: 10ch;
+    text-wrap: balance;
+}
+
+.heading-text p {
+    color: var(--clr-white);
+    text-align: center;
+    width: 30ch;
+}
+
+/* second child */
+.heading-burger {
+    align-items: center;
+    /* background-color: red; */
+    display: flex;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.burger-2 {
+    width: 100%;
+}
+
+
+
+
+
+/* SECTION 2: WIDE */
+.section-two {
+    width: 100%;
+}
+
+/* section 2 content: centered */
+.section-two-content {
+    /* background-color: red; */
+    margin: 0 auto;
+    max-width: 1229px;
+    text-align: center;
+    padding: 4rem 0.5rem;
+}
+
+.section-two-content h2 {
+    font-family: Anton, sans-serif;
+    font-size: 2.5em;
+    margin-block-end: 10px;
+}
+
+.video-container {
+    align-items: center;
+    /* background-color: red; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.video {
+    height: 300px;
+    width: 100%;
+}
+
+
+
+
+
+/* SECTION 3: WIDE */
+.section-three {
+    width: 100%;
+}
+
+/* section 3 content: centered */
+.section-three-content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1229px;
+}
+
+.section-three-content h2 {
+    font-family: Anton, sans-serif;
+    font-size: 2.5rem;
+    margin-block-end: 10px;
+}
+
+.article-products-main-container {
+    align-items: center;
+    /* background-color: rgba(255, 213, 0, 0.427); */
+    display: flex;
+    flex-wrap: wrap; /* the FLEX should be row direction */
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.div-product-container {
+    align-items: center;
+    background-color: red;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 350px;
+    padding: 1rem 0;
+    width: 90%;
+}
+
+.div-product-container:first-of-type() {
+    background-color: var(--clr-red);
+}
+
+.div-product-container:nth-of-type(2) {
+    background-color: var(--clr-yellow);
+}
+
+.div-product-container:nth-of-type(3) {
+    background-color: var(--clr-blueish);
+}
+
+.div-product-container:last-of-type {
+    background-color: var(--clr-orange);
+}
+
+.div-product-container h3 {
+    font-size: 2rem;
+}
+
+.img-products {
+    height: 200px;
+    width: 100%;
+}
+
+
+
+
+
+
+/* SECTION 4: WIDE */
+.section-four {
+    margin-top: 60px;
+    width: 100%;
+}
+
+/* section 4 content: centered */
+.section-four-content {
+    margin: 0 auto;
+    max-width: 1229px;
+    padding: 0 1rem;
+}
+
+.section-four-content h3 {
+    font-family: Anton, sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.article-grid-container {
+    display: grid;
+    gap: 1rem;
+    grid-auto-columns: 1fr; /* automatically adjust width of the element based on the 1fr property */
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+    margin-inline: auto; /* centering */
+    padding-block-start: 0.9rem;
+    padding-block-end: 2rem; /* adds padding to top and bottom; noticable that the text "NASTY REVIEW" are getting farther */
+    width: min(95%, 70rem);
+}
+
+.div-grid-child {
+    background-color: var(--clr-yellow);
+    border-radius: 5px;
+    /* max-width: 350px; */
+    margin: 0 auto;
+    padding: 1rem 1.2rem;
+}
+
+/* container of container of reviewers image and descriptions */
+.div-flex {
+    /* background-color: blue; */
+    display: flex;
+}
+
+/* container of reviewers image */
+.div-review-img {
+    /* border: 1px solid blue; */
+}
+
+/* the actual reviewer's image */
+.div-review-img img {
+    border-radius: 100%;
+    height: 80px;
+    margin-inline-end: 10px;
+}
+
+/* container of the review name and description */
+.div-review-info {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* names of the reviewer */
+.name {
+    font-size: 1em;
+}
+
+/* description of the reviewer */
+.description {
+    font-size: 0.9em;
+}
+
+.div-grid-child:nth-child(1) {
+    background-color: var(--clr-gridOne);
+    grid-area: one;
+}
+
+.div-grid-child:nth-of-type(2) {
+    background-color: var(--clr-gridTwo);
+    grid-area: two;
+}
+
+.div-grid-child:nth-of-type(3) {
+    background-color: var(--clr-gridTheeFive);
+    color: var(--clr-black-bg);
+    grid-area: three;    
+}
+
+.div-grid-child:nth-of-type(4) {
+    background-color: var(--clr-gridFour);
+    grid-area: four;    
+}
+
+.div-grid-child:nth-of-type(5) {
+    background-color: var(--clr-gridTheeFive);
+    color: var(--clr-black-bg);
+    grid-area: five;
+}
+
+.h2-heading {  
+    font-size: 1em;
+}
+
+.div-grid-child > p {
+    font-size: 0.8em;
+}
+
+
+
+
+
+/* SECTION 5: WIDE */
+.section-five {
+    /* background-color: #d6001c; */
+    width: 100%;
+}
+
+/* section 5 content: centered */
+.section-five-content {
+    /* background-color: pink; */
+    margin: 0 auto;
+    max-width: 1229px;
+    padding: 0.5rem;
+    padding-block-start: 0.9rem;
+    padding-block-end: 2rem; /* adds padding to top and bottom; noticable that the text "NASTY REVIEW" are getting farther */
+}
+
+#form h2 {
+    /* color: var(--clr-gridTheeFive); */
+    font-family: Anton, sans-serif;
+    font-size: 2.5rem;
+    margin-block-end: 10px;
+    text-align: center;
+}
+
+#form {
+    background-color: var(--clr-gridTheeFive);
+    color: var(--clr-black-bg);
+    font-size: 1em;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 1rem 2rem;
+}
+
+
+label, input[type="text"], input[type="email"], textarea {
+    width: 100%;
+}
+
+label {
+    font-weight: 500;
+    margin-inline-start: 5px;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border-radius: 20px;
+    border: 2px solid var(--clr-yellow);
+    font-size: 0.9em;
+    padding: 0.1em 0.5rem;
+    margin-block: 5px;
+}
+
+textarea {
+    border-radius: 5px;
+}
+
+#submit {
+    background-color: var(--clr-yellow);
+    display: block;
+    font-size: 1em;
+    margin: 0 auto;
+    margin-block-start: 8px;
+    padding: 0.2rem 0.5rem;
+}
+
+footer {
+    background-color: #19202c;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* xs */
+@media (min-width: 479px) {
+    .heading-text p {
+        width: 40ch;
+    }
+
+    
+}
+
+/* sm */
+@media (min-width: 640px) {
+
+     /* <div> left side: holds the logo and the Nasty Burger text */
+     .header-logo-container{
+        width: 65%;
+    }
+
+    #header-img {
+        width: 120px;
+    }
+
+    .header-logo-container h1 {
+        font-size: 2em;
+    }
+
+    /* <nav> element right: holds the ul and li elements */
+    #nav-bar {
+        width: 45%;
+    }
+
+    .bars {
+        display: none;
+    }
+
+    ul {
+        align-items: center;
+        /* border: 1px solid blue; */
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        width: 100%;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+
+    .div-product-container {
+        max-width: 400px;
+    }
+
+    .video {
+        width: 500px;
+    }
+
+    .article-grid-container {
+        grid-template-areas:
+        "one one"
+        "two three"
+        "five five"
+        "four four";
+    }
+
+    
+
+    /* names of the reviewer */
+    .name {
+        font-size: 0.9em;
+    }
+
+    /* description of the reviewer */
+    .description {
+        font-size: 0.7em;
+    }
+}
+
+/* md */
+@media (min-width: 766px) {
+    .video {
+        height: 330px;
+        width: 70%;
+    }
+    
+    .article-products-main-container {
+        /* width: 80%; */
+    }
+
+    .div-product-container {
+        width: 40%;
+    }
+
+    
+}
+
+/* Lg */
+@media (min-width: 1023px) {
+    .header-logo-container h1 {
+        font-size: 2.1em;
+    }
+
+    ul li {
+        font-size: 1.3em;
+    }
+
+    /* section 1: centered */
+    .section-one-content {
+        padding: 4rem 0;
+    }
+
+    /* "The Nastiest Burger Ever" text */
+    .heading-text,
+    /* burger image container */
+    .heading-burger {
+        padding: 0;
+        width: 50%;
+    }
+
+    /* "burger production" text in section 2 */
+    .heading-text h1 {
+        font-size: 4.5em
+    }
+
+    /* video container on section 2 */
+    .video-container {
+        padding: 0;
+    }
+
+    .video {
+        height: 350px;
+        width: 48%;
+    }
+
+    .article-grid-container {
+        grid-template-areas:
+        "one one two five"
+        "three four four five";
+    }
+}
+
+/* xL */
+@media (min-width: 1279px) {
+    .img-products {
+        height: 220px;
+    }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+}
