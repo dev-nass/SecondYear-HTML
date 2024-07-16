@@ -1,0 +1,126 @@
+
+/* CSS: Responsive landmark grid */
+/* made this for day 2 of understanding grid */
+
+/* 
+    KEY TAKEAWAYS:
+    - Aspect Ratio property
+    - img { max-width: 100%, display: block } usage
+    - I can easily overflap content using grid-row and grid-column property.
+*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+    --clr-white: #f5f6f7;
+    --clr-red: #d6001c;
+    --clr-black: #322f46; 
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background-color: var(--clr-white);
+    font-family: 'Poppins', sans-serif;
+    max-height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+
+
+
+/* utility class used to overlap the img
+    and the texts by making them start and
+    end at the same column and rows. */
+.stacked {
+    display: grid;
+}
+
+/* seleting all the child inside this element
+    that has this class. */
+.stacked > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+
+
+
+
+#main-container {
+    padding: 2em 0;
+}
+
+.section-grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+    gap: .25em;
+}
+
+/* shared class; holds all the landmarks */
+.div-landmark__container {
+    aspect-ratio: 1 / 1.5; /* responsible for the visible stack */
+    box-shadow: 0 .25em 1rem rgba(0, 0, 0, .2);
+    /* border: 3px solid var(--clr-black); */
+    padding: .5em .5em .2em; /* top, bottom, left and right */
+}
+
+.img-landmark__image {
+    aspect-ratio: 1 / 1.30;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* div that holds all the texts */
+.div-description__container {
+    align-self: end;
+    background-color: var(--clr-white);
+    margin: .5em;
+    padding: .5em;
+}
+
+.h2-landmark__title {
+    color: var(--clr-red);
+    font-size: 1.25em;
+    line-height: 1.1;
+}
+
+.p-landmark__location {
+    font-size: 0.8em;
+}
+
+@media (min-width: 60em) {
+    .img-landmark__image {
+        aspect-ratio: 1 / 1.35;
+    }
+
+    /* selecting the first image / landmark */
+    /* ensure that it spads to 2 rows and columns */
+    .featured__container {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .featured__image {
+        aspect-ratio: 1 / 1.40;
+    }
+
+    .featured__container .h2-landmark__title {
+        font-size: 1.75em;
+    }
+}

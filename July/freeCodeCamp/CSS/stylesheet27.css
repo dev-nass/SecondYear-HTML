@@ -1,0 +1,104 @@
+
+/*  CSS: Practice Creating navigation bar */
+/* 
+  KEY TAKEAWAYS:
+  - Header is the flex element that has three childs
+    - image / logo
+    - ul, li elements
+    - a, button elements
+  - li can use display: inline-block to make them sit beside 
+  one another.
+*/
+
+
+:root {
+  --clr-black: #322f46;
+  --clr-red: #d6001c;
+  --clr-white: #f5f6f7;
+  --clr-yellow: #ffa400;
+}
+
+*, *::before, *::after {
+  box-sizing: boder-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-white);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  color: var(--clr-white);
+  cursor: pointer;
+  display: block;
+}
+
+
+
+
+
+header {
+  align-items: center;
+  background-color: var(--clr-black);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+
+header > img {
+  width: 100px;
+  aspect-ratio: 1 / 1;
+}
+
+.ul-nav__links {
+  list-style: none;
+}
+
+/* so they sit next to each other */
+.li-nav__link {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.li-nav__link a {
+  border-radius: 13px;
+  color: var(--clr-white);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.3em 0.8em;
+  transition: .5s;
+}
+
+.li-nav__link a:hover {
+  background-color: #d6001c;
+}
+
+a, button {
+  text-decoration: none;
+}
+
+button {
+  background: var(--clr-yellow);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 9px 25px;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: var(--clr-black);
+  color: var(--clr-red);
+  border: 1px solid var(--clr-red);
+}
