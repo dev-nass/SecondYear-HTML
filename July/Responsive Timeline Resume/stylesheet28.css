@@ -1,0 +1,133 @@
+
+/* CSS: Responsive Timeline  */
+
+/* 
+  KEY TAKEAWAYS:
+  - Everything is done through the magnificent power of grid
+  - Usage of ::before pseudo code is used to place the small dots on each box
+    with a combination of relative and absolute positioning.
+  - Still has overflowing issue on smaller devices;
+  - Careful when it comes to font-sizes, they messes with grid formatting.
+*/
+
+:root {
+  --clr-black: #27272a;
+  --clr-blue: #2563eb;
+  --clr-white: #f5f6f7;
+}
+
+*, ::before, ::after {
+  box-sizing: boder-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-drag: none;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  align-items: center;
+  background-color: var(--clr-white);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#main-container {
+  padding: 30px 10%;
+  width: 100%;
+}
+
+#main-container {
+  padding-right: calc(10% - 30px);
+}
+
+section.section-row {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* marks the start of the every section */
+section.section-col {
+
+}
+
+/* header / title */
+header.header-container {
+  /* background-color: beige; */
+  color: var(--clr-blue);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0 0 20px 30px;
+}
+
+/* main-content */
+div.div-contents__container {
+  /* background-color: red; */
+  border-left: 2px solid var(--clr-black);
+  padding: 0 30px;
+}
+
+/* shared class that holds every content */
+div.div-box {
+  /* background-color: cadetblue; */
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+div.div-box:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 3px 12px 0 #ccc;
+}
+
+div.div-box::before {
+  background-color: var(--clr-blue);
+  border: 3px solid var(--clr-white);
+  border-radius: 50%;
+  content: '';
+  height: 16px;
+  position: absolute;
+  right: calc(100% + 22px);
+  top: 0;
+  width: 16px;
+}
+
+div.div-box h4 {
+  color: var(--clr-blue);
+  position: relative;
+}
+
+/* resolve the overflow issue with the width: ch */
+div.div-box h3 {
+  /* border: 1px solid red; */
+  color: var(--clr-black);
+  font-size: 17px;
+  font-family: Helvetica;
+  padding: 10px 0 6px;
+  width: 35ch;
+}
+
+div.div-box p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+@media(max-width:768px) {
+  section.section-row {
+    grid-template-columns: 1fr;
+  }
+
+  .section-col:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
