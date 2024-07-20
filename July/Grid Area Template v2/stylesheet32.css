@@ -1,0 +1,85 @@
+:root {
+  --clr-green: #6dbe4f;
+  --clr-red: #ec3437;
+  --clr-yellow: #fbb22f;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #2b2e56;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#main {
+
+  width: min(95%, 75em);
+  /* GRID PROPERTIES */
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas: 
+    'one two two three'
+    'one four five eight'
+    'one six seven eight';
+    gap: 10px;
+}
+
+div {
+  padding: 5em;
+  /* border: 1px solid red; */
+}
+
+.div-one {
+  background-color: var(--clr-green);
+  grid-area: one;
+}
+.div-two {
+  background-color: var(--clr-green);
+  grid-area: two;
+}
+.div-three {
+  background-color: var(--clr-red);
+  grid-area: three;
+}
+.div-four {
+  background-color: var(--clr-yellow);
+  grid-area: four;
+}
+.div-five {
+  background-color: var(--clr-red);
+  grid-area: five;
+}
+.div-six {
+  background-color: var(--clr-red);
+  grid-area: six;
+}
+.div-seven {
+  background-color: var(--clr-yellow);
+  grid-area: seven;
+}
+.div-eight {
+  background-color: var(--clr-green);
+  grid-area: eight;
+}
+
+@media(max-width: 680px) {
+  #main {
+    grid-template-areas: 
+      'one'
+      'two'
+      'three'
+      'four'
+      'five'
+      'six'
+      'seven'
+      'eight';
+  }
+}
