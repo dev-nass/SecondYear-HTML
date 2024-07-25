@@ -1,0 +1,154 @@
+#section-aboutme__parent {
+  /* border: 1px solid red; */
+  color: var(--clr-white);
+  padding-top: calc(1em * 2.9 + (calc(1em + 0.5rem)));
+}
+
+#section-aboutme {
+  /* border: 1px solid red; */
+}
+
+.article-about__container {
+  /* border: 1px solid blue; */
+  padding: 30px 10%;
+}
+
+/* grid continer */
+div.div-row {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+/* marks the start of every section styling */
+section.section-col {
+
+}
+
+header.header-aboutme__container {
+  color: var(--clr-rose);
+  padding: 0 0 20px 30px;
+}
+
+div.div-aboutme__content__container {
+  border-left: 3px solid var(--clr-white);
+  padding: 0 30px;
+}
+
+div.div-box {
+  /* glass effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  margin-bottom: 20px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+div.div-box:hover {
+  transform: translateY(-3px);
+}
+
+div.div-box::before {
+  background-color: var(--clr-blue);
+  border: 3px solid var(--clr-white);
+  border-radius: 50%;
+  content: "";
+  height: 16px;
+  position: absolute;
+  right: calc(100% + 24px);
+  top: 0;
+  width: 16px;
+}
+
+/* use to add margin-bottom */
+div.div-box__margin__bottom {
+  margin-bottom: 50px;
+}
+
+div.div-box h4 {
+  color: var(--clr-rose);
+  font-size: var(--size-s);
+}
+
+div.div-box h3 {
+  font-size: var(--size-base);
+}
+
+div.div-box p {
+  font-size: var(--size-s);
+}
+
+/* xs */
+@media (min-width: 475px) {
+}
+
+/* sm */
+@media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  header.header-aboutme__container {
+    font-size: var(--size-lg);
+  }
+  div.div-box h4 {
+    font-size: var(--size-base);
+  }
+  
+  div.div-box h3 {
+    font-size: var(--size-lg);
+  }
+  
+  div.div-box p {
+    font-size: var(--size-base);
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  .article-about__container {
+    padding: 30px 0%;
+  }
+
+  div.div-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.div-box__margin__bottom {
+    margin-bottom: 0;
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+  .article-about__container {
+    padding: 30px 5%;
+  }
+
+  header.header-aboutme__container {
+    font-size: var(--size-xl);
+  }
+  div.div-box h4 {
+    font-size: var(--size-lg);
+  }
+  
+  div.div-box h3 {
+    font-size: var(--size-xl);
+  }
+  
+  div.div-box p {
+    font-size: var(--size-lg);
+  }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+}

@@ -1,0 +1,85 @@
+
+/* CSS: Containing all neccessary variables and class */
+
+:root {
+  /* colors */
+  --clr-black: #444;
+  --clr-blackv2: #666;
+  
+  --clr-rose: #e11d48;
+  --clr-white: #f5f6f7;
+
+  /* linear colors */
+  --clr-blue: #0a17a4;
+  --clr-darkBlue: #110c2e;
+  --clr-magenta: #750835;
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-s: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;  
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+.section-parent {
+  background: linear-gradient(36deg, var(--clr-magenta), #350a2f, var(--clr-darkBlue), #0d0d40, var(--clr-blue));
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.section-content {
+  margin: 0 auto;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .section-content {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .section-content {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .section-content {
+    max-width: 768px;
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  .section-content {
+    max-width: 1024px;
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+  .section-content {
+    max-width: 1280px;
+  }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+  .section-content {
+    max-width: 1536px;
+  }
+}

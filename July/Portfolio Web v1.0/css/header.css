@@ -1,0 +1,134 @@
+.navbar-section-parent {
+  background-color: transparent;
+  /* border: 1px solid red; */
+  top: 0;
+  position: fixed;
+  z-index: 10;
+}
+
+#navbar {
+  align-items: center;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.h2-header__name {
+  color: var(--clr-white);
+  font-size: var(--size-2xl);
+}
+
+.span-change__color {
+  color: var(--clr-rose);
+}
+
+nav {
+  display: none;
+}
+
+.ul-navbar__links {
+  align-items: center;
+  /* border: 1px solid blue; */
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.li-navbar__link > a {
+  color: var(--clr-white);
+  transition: all 0.3s;
+}
+
+.li-navbar__link > a:hover {
+  color: var(--clr-rose);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.li-navbar__link {
+  font-weight: 500;
+}
+
+.a-btn {
+  background-color: var(--clr-rose);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(255, 29, 72, 0.5), 0 6px 6px rgba(255, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
+  color: var(--clr-white);
+  font-size: var(--size-s);
+  padding: 0.6em;
+  transition: all 0.3s;
+}
+
+.a-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(255, 29, 72, 0.25), 0 10px 10px rgba(255, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose)
+}
+
+
+
+
+
+
+/* xs */
+@media (min-width: 475px) {
+
+}
+
+/* sm */
+@media (min-width: 640px) {
+
+}
+
+/* md */
+@media (min-width: 768px) {
+  .h2-header__name {
+    font-size: var(--size-3xl);
+  }
+
+  nav {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .a-btn {
+    font-size: var(--size-base);
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  .h2-header__name {
+    font-size: var(--size-3xl);
+  }
+
+  .li-navbar__link {
+    font-size: var(--size-base);
+  }
+
+  .a-btn {
+    font-size: var(--size-base);
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+  nav {
+    width: 60%;
+  }
+
+  .ul-navbar__links {
+    font-size: var(--size-lg);
+  }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+  .ul-navbar__links {
+    /* border: 1px solid red; */
+    width: 50%;
+  }
+}

@@ -1,0 +1,135 @@
+#section-footer__parent {
+  padding-top: calc(1em * 2.9 + (calc(1em + 0.5rem)));
+}
+
+footer {
+  /* border: 1px solid red; */
+  color: var(--clr-white);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  padding: var(--size-3xl);
+}
+
+.div-footer__column {
+  /* border: 1px solid red; */
+}
+
+.div-footer__logo h2 {
+  font-size: var(--size-5xl);
+}
+
+.div-footer__column p {
+  font-size: var(--size-base);
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.div-footer__column h4 {
+  /* border: 1px solid red; */
+  font-size: var(--size-2xl);
+  margin-top: 10px;;
+  margin-bottom: 0.5em;
+}
+
+.div-footer__column > a {
+  /* border: 1px solid red; */
+  display: block;
+  margin-bottom: 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.div-footer__column > a:hover {
+  color: var(--clr-rose);
+}
+
+.div-footer__socials {
+  align-items: center;
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 0.5em;
+  margin-top: 5px;
+}
+
+.div-footer__socials svg {
+  height: 20px;
+  vertical-align: -3px;
+}
+
+.div-footer__social a::hover {
+  color: red;
+}
+
+.div-footer__socials > a {
+  border: 1px solid #ccc;
+  border-radius: 100%;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.div-footer__socials > a:hover {
+  background-color: var(--clr-rose);
+}
+
+.div-copyright__container {
+  color: var(--clr-white);
+  font-size: var(--size-s);
+  margin: auto;
+  text-align: center;
+  padding: var(--size-3xl);
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .div-footer__column {
+    padding: var(--size-3xl);
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  .div-copyright__container {
+    font-size: var(--size-base);
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  footer {
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .div-footer__logo h2 {
+    font-size: var(--size-7xl);
+  }
+
+  .div-footer__column p {
+    font-size: var(--size-lg);
+  }
+
+  .div-footer__column a {
+    font-size: var(--size-lg);
+  }
+
+  .div-footer__column h4 {
+    font-size: var(--size-3xl);
+    margin-bottom: 1.3em;
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+  .div-footer__column {
+    padding: var(--size-4xl);
+  }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+}
