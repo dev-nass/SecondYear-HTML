@@ -1,0 +1,146 @@
+:root {
+  /* colors */
+  --clr-black: #010101;
+  --clr-green: #97BE5A;
+  --clr-red: #B43F3F;
+  --clr-white: #f5f6f7;
+
+  /* sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-s: 0.875rem;
+  --size-base: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;  
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
+}
+
+
+.section-content {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+}
+
+.section-content:last-of-type {
+  padding-bottom: 30px;
+}
+
+/* Used for the nav and each section header */
+.section-header {
+  font-size: var(--size-2xl);
+  font-weight: 500;
+}
+
+/* Used for <main> */
+.absolute-position {
+  padding: 0 0.8em;
+}
+
+/* Used to add spacing for sections */
+.section-header {
+  margin-block-start: 15px; /* ads margin top */
+}
+
+/* The article used for indentation */
+.article-padding {
+
+}
+
+.article-padding p,
+.article-padding details {
+  margin: 10px 0;
+}
+
+/* Used to push the list */
+.article-padding ul,
+.article-padding details {
+  padding-inline: 30px;
+}
+
+pre {
+  background-color: #f7f6f3;
+  white-space: nowrap;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  overflow: auto;
+}
+
+.span-red {
+  color: var(--clr-red);
+  font-weight: 600;
+}
+
+.span-green {
+  color: var(--clr-green);
+  font-weight: 600;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .section-content {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .section-content {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .section-content {
+    max-width: 768px;
+  }
+
+  /* used to for the <main> */
+  .absolute-position {
+    position: absolute;
+    top: 0;
+    margin-left: 250px;
+  }
+
+  .article-padding {
+    padding: 0.8em 1em;
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  .section-content {
+    max-width: 1024px;
+  }
+
+  .section-header {
+    font-size: var(--size-3xl);
+  }
+
+  .absolute-position {
+    margin-left: 290px;
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+  .section-content {
+    max-width: 1280px;
+  }
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+  .section-content {
+    max-width: 1536px;
+  }
+}

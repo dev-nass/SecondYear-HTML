@@ -1,0 +1,175 @@
+
+<!-- STARTED JULY 31, 2024 -->
+<!-- END AUG 1, 2024 -->
+<!-- Technical Documentation v1.1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title></title>
+    <link href="css/reset.css" rel="stylesheet"/>
+    <link href="css/util.css" rel="stylesheet"/>
+    <link href="css/navbar.css" rel="stylesheet"/>
+    <link href="css/sectionv1.css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <nav class="section-content" id="navbar">
+        <header>JavaScript Journey</header>
+        <ul>
+          <li><a href="#what__is__javascript">What is JavaScript</a></li>
+          <li><a href="#HelloWorld">JavaScript "Hello, World"</a></li>
+          <li><a href="#VariablesAndDataType">Variable and Data Types</a></li>
+          <li><a href="#JSArrays">JavaScript Arrays</a></li>
+          <li><a href="#for">For Loop and Variations</a></li>
+          <li><a href="#while">While and Do-while Loops</a></li>
+          <li><a href="#">JSON Introduction</a></li>
+          <li><a href="#">JS Pyramic Logic</a></li>
+        </ul>
+    </nav>
+  
+    <main class="absolute-position">
+        <!-- SECTION 1 / 6: What is JavaScript -->
+        <section id="what__is__javascript" class="section-content">
+          <header class="section-header">What is JavaScript?</header>
+          <article class="article-padding">
+            <p>JavaScript is an sequential programming language that use interpret, meaning to say, it reads code per-line, instead of executing as a whole, condraticting to a compiler:</p>
+            <ul>
+              <li>Hence, a best practice is to put the script tag at the very bottom of the HTML element tags;</li>
+              <li>Internal JS is when you use the JS codes inside the script tag.</li>
+              <li>External JS, the seperated files that contains all of the code/scripts.</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- SECTION 2 / 6: JavaScript "Hello, World" -->
+        <section id="HelloWorld" class="section-content">
+          <header class="section-header">JavaScript "Hello, World"</header>
+          <article class="article-padding">
+            <p>There are various way you can print the very iconic Hello World in JaavScript:</p>
+            <ul>
+              <pre><span class="span-red">console</span>.<span class="span-red">log</span>(<span class="span-green">"Hello, World"</span>);</pre>
+              <pre><span class="span-red">alert</span>(<span class="span-green">"Hello, World"</span>);</pre>
+            </ul>
+          </article>
+        </section>
+
+        <!-- SECTION 3 / 6: Variables and Datay Types -->
+        <section id="VariablesAndDataType" class="section-content">
+          <header class="section-header">Variables and Data type</header>
+          <article class="article-padding">
+            <p>As much as how useful containers are in real life, so it does in programming. Variables acts as a container that can hold different data types.</p>
+            <p>There are various data types in JavaScript, but before we deep dive into those lets first discussed the difference between variable declaration and initilization.</p>
+            <ul>
+              <li>Declaration is the act of declaring a varible, meaning it only has the <span class="span-red">let</span> or <span class="span-red">const</span> keyword and the uniquely given identifier;</li>
+              <li>On the other hand, initialization is the process of declaring it but this time assigning a value into it.</li>
+            </ul>
+            <p>JavaScript is a <span class="span-red">dynamically typed</span> programming language, meaning you don't have to use specific keywords, unlike other languages, to declare what data type that variable should only store.</p>
+            <p>These, however, made the programming language more tricky on some instances, but if utilized corretly could lead to a more readable and yet functional code.</p>
+            <p>Nonethesless here's the different data types that JavaScript has to offer:</p>
+            <details>
+              <summary>Undefined</summary>
+              <pre><span class="span-red">let varName;</span></pre>
+              <p>When a variable is only declared, not initialized, it will automatically be an undefined data type</p>
+            </details>
+            <details>
+              <summary>String</summary>
+              <pre><span class="span-red">let variableName</span> = <span class="span-green">"Hello There"</span>;</pre>
+              <p>A string on the other hand is diffeerent, a string is a series of characters that signifies that this variable holds letter or letters.</p>
+            </details>
+            <details>
+              <summary>Integer</summary>
+              <pre><span class="span-red">let variableName</span> = <span class="span-green">12</span>;</pre>
+              <p>Integer holds integer numeric value, be it negative numbers, zero or positive ones.</p>
+            </details>
+            <details>
+              <summary>Float</summary>
+              <pre><span class="span-red">let variableName</span> = <span class="span-green">1.24</span>;</pre>
+              <p>Floating or float for short specifically holds numbers that has decimal points.</p>
+            </details>
+            <details>
+              <summary>Boolean</summary>
+              <pre><span class="red">let variableName</span> = <span class="span-green">True</span>;</pre>
+              <p>Boolean specializes on holding only two value, either true or false.</p>
+            </details>
+            <p>Be notify that all data types mentioned above are all called <span class="span-red">Primitive Data Types</span>. In a beginner sense, all you gotta do is to focus on getting familiarised on these data types first.</p>
+          </article>
+        </section>
+
+        <!-- SECTION 4 / 6: Array -->
+        <section id="JSArrays" class="section-content">
+          <header class="section-header">JavaScript Array</header>
+          <article class="article-padding">
+            <p>Arrays are also data types that doesn't belong to the <span class="span-red">primitive</span> one's mentioned earlier.</p>
+            <p>Arrays are also the big daddy of the primitive data types as it can store not just one but multiple values inside it, however storing multiple data types on them is not advisable.</p>
+            <p>Here's how you initialized them:</p>
+            <ul>
+              <pre><span class="span-red">let variableName</span> = <span class="span-green">[1, 2.3, true, "Hello"]</span>;</pre>
+            </ul>
+            <p>Declaring them is a bit diffeerent from normal one's, aren't they? Array values are supposed to be enclosed in a square brackets <span class="span-red">[ ]</span>, and each element, as we call it, should be seperated by a coma.</p>
+            <p>To access these elements we can use their index's. Indexies starts by <span class="span-red">0</span>, as derived from computers, proceeding to 1 and so on.</p>
+            <p>Here's how you do it:</p>
+            <ul>
+              <pre>
+                <span class="span-red">variableArray[0]</span>; // acces first index<br>
+                <span class="span-red">let var</span> = variableArray[1]; // passes te value
+              </pre>
+            </ul>
+          </article>
+        </section>
+
+        <!-- SECTION 5 / 6: For loop  -->
+        <section id="for" class="section-content">
+          <header class="section-header">For Loop and Variations</header>
+          <article class="article-padding">
+            <p>Loops can contain block of code that can repeatedly execute all the instructions pass into them.</p>
+            <p><span class="span-red">For loop</span> is one the most used loop in any programming languages. Here's the structure in creating this loop.</p>
+            <ul>
+              <pre><span class="span-red">for</span>(declaration; condition; incrementation){
+                <br> // loop body <br>
+              }
+              </pre>
+            </ul>
+            <p>However unlike any other programming languages JavaScript has <em>two</em> more different variations of this both of which are used for iterating an array.</p>
+            <p>These are:</p>
+            <ul>
+              <details>
+                <summary>For of loop</summary>
+                  <pre><span class="span-red">for</span>(let i <span class="span-red">of</span> array){
+                    <br> // loop body <br>
+                  }</pre>
+              </details>
+
+              <details>
+                <summary>For in loop</summary>
+                  <pre><span class="span-red">for</span>(let i <span class="span-red">in</span> array){
+                    <br> // loop body <br>
+                  }</pre>
+              </details>
+            </ul>
+            <p><span class="span-red">For of loop</span> access each index of the array and return the elements of each.</p>
+            <p><span class="span-red">For in loop</span> does the same but return the actual index, not the element. But do reminded that the index being returned is of string data type and not integer.</p>
+            </article>
+        </section>
+
+        <!-- SECTION 6 / 6: While & Do-while -->
+        <section id="while" class="section-content">
+          <header class="section-header">While & Do-while Loop</header>
+          <article class="article-padding">
+            <p>While and do while are of the same kind. The key difference between the two is do-while perform's the code inside of it atleast once before checing the condition. Unlike the while loop checks the condition beforehand.</p>
+            <p>A quick tip for using while loop to access the indexies of an array. Here's how you do it:</p>
+            <ul>
+              <pre><span class="span-red">while</span>(array[index]){
+                <br>sumOfArray = sumOfArray + numOfArray[index];<br>
+                index++;<br>
+              }
+              </pre>
+            </ul>
+            <p>This loop will iterates as long the index variable that's used to access the actual indexies of the array isn't undefined.</p>
+          </article>
+        </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+
+/*
+  KEY TAKEAWAYS:
+  - Practiced using utility classes to make life easier, yet harder to track the code XD
+  - nav is fixed not absolute position, so when the main-doc is scrolling it won't do the same.
+  - Overflow is not given to nav, and unlike the previous version, this
+  makes the life more easier than giving it to the ul.
+  - min-height: 100%; was able to expand the height of nav#navbar same to the body on larger screen.
+  - The class="absolute-position" that way used on the <main> has a mrgin-left changing on md, and lg 
+  media queries, because the margin-left is using px it cause some inconsistencies on diff. screen sizes.
+  - The way they put <code> like design in web is by the use of nesting, either
+    - pre, span or code
+    - by doing so they can control the line break and white-spces better.
+  - First implementation of <details> and <summary> for dropdown seclections.
+*/
+
+
+/* HEADER */
+nav#navbar {
+  /* background-color: rgba(129, 169, 19, 0.557); */
+  border-bottom: 1px solid var(--clr-black);
+  max-height: 275px;
+  overflow: auto;
+  width: 100%;
+
+}
+
+nav#navbar header {
+  border-bottom: 1px solid var(--clr-black);
+  font-size: var(--size-2xl);
+  font-weight: 500;
+  padding: 1em;
+  text-align: center;
+}
+
+nav#navbar ul {
+  /* border: 1px solid red; */
+  height: 100%;
+}
+
+nav#navbar ul li {
+  border-bottom: 1px solid var(--clr-black);
+  padding: 0.5em 1em;
+}
+
+nav#navbar ul li a {
+  font-size: var(--size-s);
+}
+
+
+
+
+/* md */
+@media (min-width: 768px) {
+  nav#navbar {
+    border-right: 1px solid var(--clr-black);
+    border-bottom: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 250px;
+    min-height: 100vh;
+  }
+}
+
+/* Lg */
+@media (min-width: 1024px) {
+  nav#navbar {
+    max-width: 290px;
+  }
+
+  nav#navbar header {
+    font-size: var(--size-3xl);
+    padding: 0.5em;
+  }
+  
+  nav#navbar ul li a {
+    font-size: var(--size-base);
+    padding: 0.7em 1.1em;
+  }
+}
+
+/* xL */
+@media (min-width: 1280px) {
+}
+
+/* 2xL */
+@media (min-width: 1536px) {
+}
