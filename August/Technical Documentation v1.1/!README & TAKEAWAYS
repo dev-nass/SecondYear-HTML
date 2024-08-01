@@ -1,0 +1,14 @@
+/*
+  KEY TAKEAWAYS:
+  - Practiced using utility classes to make life easier, yet harder to track the code XD
+  - nav is fixed not absolute position, so when the main-doc is scrolling it won't do the same.
+  - Overflow is not given to nav, and unlike the previous version, this
+  makes the life more easier than giving it to the ul.
+  - min-height: 100%; was able to expand the height of nav#navbar same to the body on larger screen.
+  - The class="absolute-position" that way used on the <main> has a mrgin-left changing on md, and lg 
+  media queries, because the margin-left is using px it cause some inconsistencies on diff. screen sizes.
+  - The way they put <code> like design in web is by the use of nesting, either
+    - pre, span or code
+    - by doing so they can control the line break and white-spces better.
+  - First implementation of <details> and <summary> for dropdown seclections.
+*/
