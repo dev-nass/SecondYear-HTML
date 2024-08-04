@@ -1,0 +1,4 @@
+Review the following:
+1. Each section-parent has their unique calc() for margin-top, consider seeing that.
+2. Each section-content that uses their own id's has unique padding that keeps all the
+content between each section-content align left and right.
