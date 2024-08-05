@@ -1,0 +1,151 @@
+
+/* 
+  KEY TAKEWAY:
+  - Before and after uses :: as a pseudo code selector
+  - Both before and after are considered inline display until you made them block
+  which result in them showing at top of the element being selected.
+  - They are both also within the element being selected; they are
+  just before or after the content.
+  - The usage of transform: scaleX() & scaleY() are used
+  - Transform origin, and also positioning properties are utilized.
+*/
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(187, 187, 187, 0.841);
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+main {
+  background-color: #f5f6f7;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 3em 1em;
+
+  width: 90%
+}
+
+a {
+  color: rgba(233, 49, 49, 0.778);
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a::after {
+  background-color: currentColor;
+  content: "";  
+  height: 3px;
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 250ms ease-in;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* THE DIV */
+.div-card {
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-image: url("https://i.natgeofe.com/n/2a832501-483e-422f-985c-0e93757b7d84/6_3x2.jpg");
+  background-size: cover;
+  color: #f5f6f7;
+  height: 500px;
+  margin-top: 50px;
+  z-index: 1;
+
+  position: relative;
+}
+
+/* h1 */
+.div-card-header {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  z-index: 1;
+}
+
+/* responsible for aqua colored background */
+.div-card-header::after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  bottom: -0.25rem;
+  width: calc(100% + 4rem);
+  background-color: aqua;
+  z-index: -1;
+
+  transform: scaleX(0.075);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+}
+
+/* if DIV is hovered, enlarge the white background to h1 */
+.div-card:hover .div-card-header::after {
+  transform: scale(1);
+}
+
+/* the p element */
+.div-card-content {
+  color: transparent;
+  position: relative;
+  transition: color 550ms 150ms; /* property name, duration, delay */
+}
+
+/* if div is hovered change the color of the p */
+.div-card:hover .div-card-content {
+  color: black;
+}
+
+/* p element, responsible for adding the red background */
+.div-card-content::after {
+  background-color: red;
+  content: "";
+  position: absolute;
+  top: -0.75rem;
+  bottom: -0.75rem;
+  left: 0.1rem;
+  right: 0.1rem;
+  z-index: -1;
+
+  transform: scaleY(0);
+  transition: transform 250ms ease-in 250ms;
+  transform-origin: top;
+}
+
+/* if div is hovered enlarge the red background */
+.div-card:hover .div-card-content::after {
+  transform: scaleY(1);
+}
