@@ -1,7 +1,7 @@
 
 # Landing Search Bar
 
-Just a random Idea popped out of my mind.
+Just a random Idea popped out of my mind. Made in August 09, 2024
 
 ## Core Explanation
 - Form is used as a container ---
