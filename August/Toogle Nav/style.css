@@ -1,0 +1,179 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+header {
+  background-color: #136c72;
+  
+  padding: 0.8rem 0.5rem;
+}
+
+/* <button> */
+.nav-toggle {
+  background-color: #072A2D;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 3em;
+  padding: 0em;
+  width: 3em;
+  transition: all 250ms ease-in;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+.hamburger {
+  position: relative;
+  width: 50%;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: white;
+  display: block;
+  height: 3px;
+  margin: 0 auto;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* <a> element */
+.header__logo {
+  margin: 0 auto;
+  vertical-align: 3px;
+}
+
+/* navbar */
+nav {
+  display: none;
+}
+
+/* class that will be passed if the <button> is pressed */
+.nav--show {
+  background-color: #136c72;
+  display: block; /* important for it to display */
+  visibility: visible;
+  height: auto;
+  padding: 1rem 0;
+  position: relative;
+}
+
+ul.nav__list {
+  align-items: center;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* all the second ul is selected on this */
+ul.nav__list + ul.nav__list {
+  margin-top: 10px;
+}
+
+li {
+  list-style: none;
+  margin-top: 10px;
+}
+
+
+a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.sign__up {
+  background-color: #fff;
+  border-radius: 20px;
+  color: #136c72;
+  padding: 0.3rem 0.7rem;
+
+  transition: all 250ms ease-in;
+}
+
+
+
+
+
+@media (min-width: 760px) {
+  /* the <button> element with a burger on it */
+  .nav-toggle {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* the <a> with <img> */
+  .header__logo {
+    margin: 0;
+  }
+
+  /* the navbar */
+  nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  ul.nav__list {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  ul.nav__list + ul.nav__list {
+    margin-top: 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  .line {
+    background-color: #072A2D;
+    width: 3px;
+    height: 100%;
+    margin-left: 15px;
+  }
+
+  .sign__up:hover {
+    background-color: #072A2D;
+    color: #fff;
+  }
+}
