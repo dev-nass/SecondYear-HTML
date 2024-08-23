@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+:root {
+  --clr-grey: #1e212b;
+  --clr-white: #fff;
+  --clr-yellow: #f8d254;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat';
+  min-height: 100vh;
+  width: 100%;
+}
+
+ul, li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* actual logo at the left side of the nav */
+.header__logo {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 900;
+
+  display: inline;
+
+  position: absolute;
+  left: 1rem;
+  /* stroke */
+  color: var(--clr-white);
+  background: var(--clr-yellow);
+  background-clip: text;
+  -webkit-text-stroke: transparent;
+  -webkit-text-stroke-width: calc(1em / 16); /* the one the makes the STROKE happen */
+  -webkit-background-clip: text;
+}
+
+/* this has two usage:
+1. Use for the header logo to make it disappear;
+2/ Use for the nav logo to make it disappear
+*/
+.logo__nav {
+  display: none;
+}
+
+/* the logo that's on the nav */
+.logo--moved {
+  font-size: 2rem;
+  font-weight: 900;
+
+  display: block;
+  margin-bottom: 1.5rem;
+  /* stroke */
+  color: var(--clr-white);
+  background: var(--clr-yellow);
+  background-clip: text;
+  -webkit-text-stroke: transparent;
+  -webkit-text-stroke-width: calc(1em / 16); /* the one the makes the STROKE happen */
+  -webkit-background-clip: text;
+}
+
+/* the btn element */
+.header__btn {
+  background-color: var(--clr-yellow);
+  border-radius: 20px;
+  border: none;
+  height: 3em;
+  vertical-align: 10px;
+  width: 3em;
+
+  position: absolute;
+  right: 1rem;
+}
+
+/* the span element */
+.hamburger {
+  width: 80%;
+  /* animation: btnRotate 1s infinite; */
+}
+
+/* the span elements with its pseudo selectors */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background-color: var(--clr-white);
+  display: block;
+  height: 3px;
+  margin: 0 auto;
+}
+
+/* moving it upward */
+.hamburger::before {
+  content: '';
+  transform: translateY(-6px);
+  width: 100%;
+}
+
+/* moving it downward */
+.hamburger::after {
+  content: '';
+  transform: translateY(3px);
+  width: 100%;
+}
+
+/* this class with be added on the javascript;
+  this ensures that the three parallel lines will be
+  substituted with an (' X ') cross character after the
+  btn is clicked
+*/
+.hamburger__toggle::before {
+  color: var(--clr-white);
+  content: '\2716';
+  display: block;
+}
+
+/* the actual navbar */
+.navbar {
+  display: none;
+}
+
+/* will be passed on if the header btn is clicked */
+.nav--on {
+  display: block;
+  padding-top: 3rem;
+}
+
+
+a {
+  color: var(--clr-grey);
+  text-decoration: none;
+
+  transition: all 250ms ease-in;
+}
+
+a:hover {
+  color: var(--clr-yellow);
+  font-weight: 700;
+}
+
+/* bsclly says, all nav list that has sibling next into it
+  add margin-top into yourselves. 
+*/
+.nav__li + .nav__li {
+  margin-top: 10px;
+}
+
+@media(min-width: 1024px) {
+  header {
+    background-color: var(--clr-yellow);
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header__logo {
+    position: relative;
+  }
+
+  .header__btn {
+    display: none;
+    opacity: 0;
+    visibility: none;
+  }
+
+  .navbar {
+    align-items: center;
+    /* border: 1px solid red; */
+    display: flex;
+    margin-left: 3rem;
+  }
+
+  .nav__ul {
+    display: flex;
+  }
+
+  .nav__li + .nav__li {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
