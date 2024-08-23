@@ -42,4 +42,8 @@ Another toggleable navigator that I created. Started August 22, and finished aft
   </ul>
 </details>
 
+## Issue
+- The animation for mobile is not implemented.
+- When the nav--on is passed into the navbar and switched back to desktop view there's misalignment happening to header__logo (see the PC-Issue.png)
+
 
