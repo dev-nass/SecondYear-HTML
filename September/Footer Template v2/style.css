@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+  --clr-brown: #4e3629;
+  --clr-dirtyWhite: #b7b09c;
+  --clr-white: #f1f1f1;
+  --clr-yellow: #ffc72c;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Prompt', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+}
+
+ul, li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* FOOTER SECTION */
+footer {
+  background-color: var(--clr-brown);
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.footer__header {
+  color: var(--clr-dirtyWhite);
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.footer__address,
+.footer__contact {
+  color: var(--clr-white);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
+
+.footer__content {
+  margin-top: 20px;
+}
+
+.footer__ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__ul li {
+  color: var(--clr-yellow);
+  cursor: pointer;
+  font-weight: 400;
+  width: 50%;
+  padding: 1rem 0.5rem;
+}
+
+.secondary--li {
+  border-top: 2px solid var(--clr-dirtyWhite);
+  margin-top: 20px;
+}
+
+.footer__logo--div {
+  border-top: 2px solid var(--clr-dirtyWhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.footer__text {
+  color: var(--clr-dirtyWhite);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer__link {
+  color: var(--clr-yellow);
+  cursor: pointer;
+}
+
+
+@media(min-width: 640px) {
+  .footer__ul li {
+    width: 40%;
+  }
+
+  .footer__logo--div {
+    border: none;
+  }
+}
+
+@media(min-width: 768px) {
+  footer {
+    padding: 2rem 4rem;
+  }
+  .footer__content {
+    display: flex;
+  }
+
+  .footer__ul li {
+    width: 50%;
+  }
+
+  .footer__logo--div {
+    border-left: 2px solid var(--clr-dirtyWhite); 
+    margin-left: 10px;
+  }
+}
